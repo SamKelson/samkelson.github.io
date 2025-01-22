@@ -12,7 +12,7 @@
 
 <!-- begin _includes/seo.html -->
 <title>Vote No on Measure N - Sam Kelson</title>
-<meta name="description" content="/no-on-n  Meet Sam.    Sam is 11 months old...">
+<meta name="description" content="https://samkelson.github.io//no-on-n  Meet Sam.    Sam is 11 months old...">
 
 
 
@@ -20,14 +20,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Sam Kelson">
 <meta property="og:title" content="Vote No on Measure N">
-<meta property="og:url" content="/no-on-n">
+<meta property="og:url" content="https://samkelson.github.io//no-on-n">
 
 
-  <meta property="og:description" content="/no-on-n  Meet Sam.    Sam is 11 months old...">
+  <meta property="og:description" content="https://samkelson.github.io//no-on-n  Meet Sam.    Sam is 11 months old...">
 
 
 
-  <meta property="og:image" content="">
+  <meta property="og:image" content="https://samkelson.github.io/">
 
 
 
@@ -40,7 +40,7 @@
 
 
 
-<link rel="canonical" href="/no-on-n">
+<link rel="canonical" href="https://samkelson.github.io//no-on-n">
 
 
 
@@ -51,7 +51,7 @@
     
       "@type": "Person",
       "name": "Sam Kelson",
-      "url": "/"
+      "url": "https://samkelson.github.io//"
     
   }
 </script>
@@ -158,7 +158,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/no-on-n" class="u-url" itemprop="url">Vote No on Measure N</a>
+            <a href="https://samkelson.github.io//no-on-n" class="u-url" itemprop="url">Vote No on Measure N</a>
           </h1>
           
 
