@@ -11,7 +11,7 @@ classes: wide
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    <img src="{{project.data.header.overlay_image}}" / >
+    <img src="{{project.data.header.overlay_image  | relative_url}}" / >
 	<h3 class="archive__item-title no_toc" itemprop="headline">
       {% if project.data.permalink %}
         <a href="{{ project.data.permalink }}">{{ project.data.title }}</a> 
@@ -29,7 +29,7 @@ classes: wide
 {%- for past-project in collections.past-projects -%}
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    <img src="{{past-project.data.header.overlay_image}}" / >
+    <img src="{{past-project.data.header.overlay_image | relative_url}}" / >
 	<h3 class="archive__item-title no_toc" itemprop="headline">
       {% if past-project.data.permalink %}
         <a href="{{ past-project.data.permalink }}">{{ past-project.data.title }}</a> 
