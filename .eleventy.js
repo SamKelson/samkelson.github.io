@@ -1,4 +1,4 @@
-const siteURL = "https://samkelson.github.io/"; // don't include trailing slash as the arguments passed to absoluteUrl function start with a slash
+const siteURL = "https://samkelson.github.io/personal_website"; // don't include trailing slash as the arguments passed to absoluteUrl function start with a slash
 
 const fs = require("fs-extra");
 const sass = require("sass");
