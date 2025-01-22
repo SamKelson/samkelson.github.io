@@ -1,4 +1,4 @@
-const siteURL = ""; // don't include trailing slash as the arguments passed to absoluteUrl function start with a slash
+const siteURL = "https://samkelson.github.io/"; // don't include trailing slash as the arguments passed to absoluteUrl function start with a slash
 
 const fs = require("fs-extra");
 const sass = require("sass");
@@ -207,9 +207,6 @@ module.exports = function (eleventyConfig) {
     // Passthrough copy
     // don't use .gitignore (allows compiling sass to css into a monitored folder WITHOUT committing it to repo)
     eleventyConfig.setUseGitIgnore(false);
-
-    //Copy CNAME
-    eleventyConfig.addPassthroughCopy("src/CNAME");
 
     // Processing configuration
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
