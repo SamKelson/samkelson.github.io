@@ -28,7 +28,7 @@ const urlFilter = require("@11ty/eleventy/src/Filters/Url");
 const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 
 module.exports = function (eleventyConfig) {
-    let pathPrefix = "/";
+    let pathPrefix = "/personal_website/";
 
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
     eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
@@ -346,9 +346,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("relative_url", relativeURLALT);
     eleventyConfig.addFilter("absolute_url", absoluteUrl);
-
-    console.log(relativeURLALT);
-    console.log(absoluteUrl);
+    
 
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
@@ -388,7 +386,7 @@ function relativeURL(url, pathPrefix = undefined) {
 
     // Look up the url of the current rendering page, which is accessible via
     // `this`.
-    console.log(this); // rmcg
+    //console.log(this); // rmcg
 
     // rmcg - removed ctx from this.ctx.page.url
     const currentDir = this.page.url;
@@ -424,10 +422,6 @@ function relativeURL(url, pathPrefix = undefined) {
  * @returns {string} resulting URL
  */
 function relativeURLALT(url, pathPrefix = undefined) {
-    pathPrefix = "/";
-    //      console.log(url);
-    //      console.log(pathPrefix);
-    //      console.log(this.page);
     if (pathPrefix !== undefined) {
         // Fall back on original url filter if pathPrefix is set.
         return urlFilter(url, pathPrefix);
@@ -440,7 +434,7 @@ function relativeURLALT(url, pathPrefix = undefined) {
 
     // Look up the url of the current rendering page, which is accessible via
     // `this`.
-    console.log(this);
+    //console.log(this);
     const currentDir = this.page.url;
     const filteredUrl = urlFilter(url, "/");
 
