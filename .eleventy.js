@@ -347,6 +347,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("relative_url", relativeURLALT);
     eleventyConfig.addFilter("absolute_url", absoluteUrl);
 
+    console.log(relativeURLALT);
+    console.log(absoluteUrl);
+
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
 
@@ -385,7 +388,7 @@ function relativeURL(url, pathPrefix = undefined) {
 
     // Look up the url of the current rendering page, which is accessible via
     // `this`.
-    //console.log(this); // rmcg
+    console.log(this); // rmcg
 
     // rmcg - removed ctx from this.ctx.page.url
     const currentDir = this.page.url;
