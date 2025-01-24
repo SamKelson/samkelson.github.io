@@ -27,6 +27,8 @@ const path = require("path");
 const urlFilter = require("@11ty/eleventy/src/Filters/Url");
 const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
     let pathPrefix = "/personal_website/";
 
@@ -346,6 +348,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("relative_url", relativeURLALT);
     eleventyConfig.addFilter("absolute_url", absoluteUrl);
+
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
     
 
     return {
@@ -369,6 +373,10 @@ module.exports = function (eleventyConfig) {
         },
     };
 };
+
+module.exports.config = {
+	pathPrefix: "/personal_website/",
+}
 
 function numberOfWords(content) {
     return content.split(/\s+/g).length;
