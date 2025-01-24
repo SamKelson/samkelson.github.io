@@ -6,7 +6,7 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang='en-US' class="no-js">
+<html lang="en-US" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -83,11 +83,11 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
-<link rel="icon" type="image/png" href="../../../../../assets/images/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="../../../../../assets/images/favicon/favicon.svg" />
-<link rel="shortcut icon" href="../../../../../assets/images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/images/favicon/apple-touch-icon.png" />
-<link rel="manifest" href="../../../../../assets/images/favicon/site.webmanifest" />
+<link rel="icon" type="image/png" href="../../../../../assets/images/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="../../../../../assets/images/favicon/favicon.svg">
+<link rel="shortcut icon" href="../../../../../assets/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../../../../../assets/images/favicon/site.webmanifest">
 
 <!-- end custom head snippets -->
 
@@ -151,9 +151,7 @@
 
 
 
-<div class="page__hero--overlay"
-  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../../../../assets/images/header_copyrightweaving.jpg');"
->
+<div class="page__hero--overlay" style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../../../../assets/images/header_copyrightweaving.jpg');">
   
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
@@ -180,7 +178,7 @@
   
 
 
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page h-entry" itemscope="" itemtype="https://schema.org/CreativeWork">
     
     
     <meta itemprop="datePublished" content="2025-01-15T00:00:00+00:00">
@@ -237,9 +235,9 @@
 <p>The proposed language in the AAP opposition to the petition would make this impossible while complying with the requirements of the exemption, since they state that anyone doing this work must view &quot;the contents of the literary works in the corpus solely for the purpose of verification of the statistical research findings and no other type of analysis&quot;. Quality control of automatic text splitting is not a statistical research finding, but it is an essential prerequisite to make sure the files we're analyzing contain what we think they contain -- which is fundamental to our ability to make any legitimate claims using the results.</p>
 <p>One conceivable response may be to modify &quot;statistical research findings&quot; with &quot;computational analysis&quot;, since this could accommodate data cleaning processes that involve searching the text for words and splitting the files accordingly, as described above. However, this kind of automated rough processing is not the only way we prepare text corpora. We work with large  corpora when we are less interested in the contents of any one specific document than in the sum totality of the texts. In those cases, we can write off a handful -- or even more -- of specific texts if they prove to be formatted in a way that our scripts aren't able to successfully split, without it impacting the project overall. Other times, though, we <em>are very interested</em> in the contents of a small handful of documents, and throwing out one or two for being difficult to parse would make it impossible to proceed with the research project.</p>
 <p>Writing a script to automatically split files is a fiddly task that can be time-consuming: you have to write very precise search parameters, typically using a syntax called <em>regular expressions</em>. There are lots of possible variations that might work to identify the things you're looking for, but other variations that seem near-identical may fail. What's more, it is much easier to write these search parameters looking at the <em>actual text you're splitting</em> rather than the copy optimized for human readers, because it's not always 100% clear how the plain-text conversion process will handle formatting and spacing. For instance, the AAP's opposition involves some strike-through text as one can read in the PDF, and each of the provisions they suggest modifying appears on its own line:</p>
-<p><img src="/assets/images/copyrightpdf.jpg" alt="Screenshot of a original PDF"></p>
+<p><img src="/personal_website/assets/images/copyrightpdf.jpg" alt="Screenshot of a original PDF"></p>
 <p>If I were trying to extract this kind of text using a script, one of the things I would be likely to try early on would be looking for single capitalized letters, in parentheses, at the start of the line. But if I look at the actual text file I'm working with, rather than the reader-friendly PDF, I would quickly see that the formatting is very different.</p>
-<p><img src="/assets/images/copyrighttext.jpg" alt="Screenshot of a converted text"></p>
+<p><img src="/personal_website/assets/images/copyrighttext.jpg" alt="Screenshot of a converted text"></p>
 <p>Those newlines before each letter are not there, but one has been inserted randomly in the middle of (C). If it were not permitted to <em>look at the actual text file</em>, I could easily have lost half a day to maddening trial and error with regular expressions trying to figure out something that would literally take a second of looking with my eyeballs. Also, depending on how strictly this proposed &quot;no viewing the contents&quot; rule is interpreted, it would preclude writing statements in the code that display portions of the text to check that you're getting what you think you're getting, which is a fundamental tool in our debugging toolkit when trying to find regular expressions that work for finding text.</p>
 <p>The effort of writing and debugging and testing and fixing code to split documents computationally is worth it when you're faced with hundreds or thousands of them. If you've only got a single document with a given format, it doesn't make sense to do it that way. What's more, not all documents even follow a reliable and consistent structure. While the original petition split each submitted letter into its own appendix, the AAP letter has a set of &quot;Exhibits&quot;, and exhibit 3 groups all the letters together. Any code I wrote to split the letters in the petition would not work for the same purpose in the AAP letter.</p>
 <h2 id="the-power-of-human-eyeballs" tabindex="-1">The power of human eyeballs</h2>
@@ -277,17 +275,17 @@
 </ul>
 <p>Additional blue or white yarn is used to indicate the presence of documents with no key terms, or to fill out the overall word count for documents that had a lower percentage of the key words. Letters are marked with a thick blue-purple yarn.</p>
 <p>References to AI are woven in two ways: if AI is being used as a generic umbrella term for probabilistic computational methods, it is woven using the same plain weave as the rest of the visualization. When AI is modified (or implicitly modified) by &quot;generative&quot; in the source document, it is woven with a technique called leno, which involves twisting warp threads over each other before weaving, resulting in a lacy texture.</p>
-<p><img src="/assets/images/copyrightweaving1.jpg" alt="Weaving of beginning of petition"></p>
+<p><img src="/personal_website/assets/images/copyrightweaving1.jpg" alt="Weaving of beginning of petition"></p>
 <p><em>The beginning of the petition; most visible terms are security (yellow), Mellon (purple), Hathi (turquoise) and fair (light blue).</em></p>
-<p><img src="/assets/images/copyrightweaving2.jpg" alt="Weaving of letters of support"></p>
+<p><img src="/personal_website/assets/images/copyrightweaving2.jpg" alt="Weaving of letters of support"></p>
 <p><em>The beginning of the petition; most visible terms are security (yellow), Mellon (purple), Hathi (turquoise) and fair (light blue).</em></p>
-<p><img src="/assets/images/copyrightweaving3.jpg" alt="Weaving of opposition filings"></p>
+<p><img src="/personal_website/assets/images/copyrightweaving3.jpg" alt="Weaving of opposition filings"></p>
 <p><em>Left to right: Matthew Sag, Rachael Samberg &amp; Timothy Vollmer, and Lauren Tilton &amp; Taylor Arnold's letters of support for the petition. The term &quot;AI&quot; is particularly visible as a fluffy yarn.</em></p>
-<p><img src="/assets/images/copyrightweaving4.jpg" alt="Weaving of section of adverse effects"></p>
+<p><img src="/personal_website/assets/images/copyrightweaving4.jpg" alt="Weaving of section of adverse effects"></p>
 <p><em>Part of the opposition filings. &quot;Security&quot; in yellow is particularly visible, as is &quot;fair&quot; (in light blue) and &quot;AI&quot; in fluffy yarn. The leno twists visible in the white warp section represent references to generative AI</em>.</p>
-<p><img src="/assets/images/copyrightweaving5.jpg" alt="Weaving of AAP's oposition filings"></p>
+<p><img src="/personal_website/assets/images/copyrightweaving5.jpg" alt="Weaving of AAP's oposition filings"></p>
 <p><em>Part of the AAP's filing about adverse effects. Note the repeated references to generative AI (as visible through the twisted warp yarn), and the section referencing security, HathiTrust, and fair use in the middle.</em></p>
-<p><img src="/assets/images/copyrightweaving6.jpg" alt="Weaving of AI section"></p>
+<p><img src="/personal_website/assets/images/copyrightweaving6.jpg" alt="Weaving of AI section"></p>
 <p><em>Close-up of a section from the AAP's opposition filing, in the section on TPM. Terms used are (generative) AI, piracy (gray yarn towards the top), security (yellow), Mellon (purple), fair (light blue), and collaboration (maroon).</em></p>
 <h2 id="an-%22ai%22-powered-analysis" tabindex="-1">An &quot;AI&quot; powered analysis</h2>
 <p>Prior to the release of ChatGPT, I tried hard to never use the term &quot;AI&quot;, opting for something more precise instead. Machine learning. Natural-language processing. Large language models. That rhetorical war has been lost, and many kinds of methods and processes are now lumped together under that label, with its power to impress and/or terrify (sometimes both at once). I've seen it defined so broadly as to include anything non-deterministic, such as the MALLET topic modeling tool originally developed in 2002. The way topic modeling works is, basically, you give it a set of texts (which can -- and usually should -- be smaller than an entire document, think more like paragraphs or sections than novels or legal filings), you tell it how many &quot;topics&quot; (or groupings of words that tend to co-occur) you want it to generate, and it shuffles all the words around into different buckets until it's finished. Unless you very specifically fix some parameters, you'll never get the exact same results twice (again, because it's a machine learning model, non-deterministic, and therefore &quot;AI&quot;), but if it's working well, you should get similar results if you run it over the same corpus multiple times.</p>
@@ -323,7 +321,7 @@
 <li><em>Collaboration</em> also appears in the top words for topics 15 and 16</li>
 </ul>
 <p>The fact that different forms of <em>collaborat-</em> appear in different topics highlights something noteworthy about topic modeling: it's literally clustering word forms, not concepts. From the perspective of the algorithm, &quot;collaborative&quot; and &quot;collaboration&quot; are completely distinct words -- no less distinct than &quot;text&quot; and &quot;statutory&quot;. The fact that topic 3 has multiple forms of <em>collaborat-</em> is a good sign (having multiple forms of the same word appear together suggests the topic model is picking up on actual coherent trends in the text, since you would expect different forms of the same word to be used in similar contexts). Having forms of <em>collaborat-</em> in so many topics suggests that it's a theme that permeates these documents, but this also makes it difficult to use this topic model to look at collaboration in the documents, because you can't clearly point to one or two &quot;collaboration&quot; topics to track. One might be tempted to point to topic 3 (which has multiple forms of <em>collaborat-</em>, but if we create a heat map showing how much of a document is made up of a particular topic (where brighter colors indicate a higher percentage of the document's words are associated with that topic), we can see that topic 3 is a poor proxy for the prevalence of collaboration in these documents, as illustrated by our simple word search analysis earlier:</p>
-<p><img src="/assets/images/copyrightviz1.jpg" alt="Heat map visualization of topic model"></p>
+<p><img src="/personal_website/assets/images/copyrightviz1.jpg" alt="Heat map visualization of topic model"></p>
 <p>This visualization does highlight some clear associations between certain topics and groups of documents. Topic 7 (top words including: professor, information, director, request, counsel, letter, response, office, sincerely, circumvention) is very strongly associated with responses to the AAP letter. These responses are also, on the whole, quite short, which is why they appear so bright on the visualization: it's easy for a very high percentage of the words to be from a topic when we're only looking at a few sentences. Because of the length difference compared to some of the longer documents which can run many pages, I'd remove these short responses if I were digging into this in more depth, which would better show the amount of variation in topic distribution across the longer documents. Nonetheless, there are other trends we can see here: topic 6 (top words including: rights, property, millions, piracy) appears primarily in the opposition documents. Topic 14 (security, exemption, measures, circumvented, regulation) appears visibly in the TPM section of the petition, and in the opposition.</p>
 <p>Many of these topics could be a jumping-off point for further analysis of the discourse in these documents: what are the words that appear together? How are they being used? For instance, you could use NLP tools like spaCy (which use probabilistic language models for identifying things like part of speech, named entities, etc. -- meaning it's another thing under the broad umbrella of &quot;AI&quot;) to look at subjects and objects in these text: <em>who</em> is asserted to be doing <em>what</em>? You could also feed some of the interesting words surfaced through the topic modeling back into the earlier simple word-search algorithm. And there are numerous other computational methods that we commonly use to try to get a handle on how language is being used in texts, some probabilistic, others deterministic.</p>
 <p>Crucially, though, doing this kind of work well is slow, painstaking, and requires care and attention to detail. You have to prepare the texts carefully. You have to factor in things like different document length with many kinds of analysis. You have to be able to look at the actual text files you're analyzing -- not just the more pleasant human-readable variants -- to make sure you're not getting tripped up by conversion errors, bad OCR, or other technical details that can derail your whole analysis. This type of scholarship, done responsibly, is literally the opposite of the ChatGPT-like &quot;AI&quot; that is the implicit boogeyman in multiple opposition documents. We're using tools and our own intuition to closely and carefully analyze documents, not producing text with plausible vibes but a fundamental disconnect from reality.</p>
@@ -370,11 +368,7 @@
 <div class="page__footer-copyright">
   &copy; 2025 Sam Kelson. Powered by
   <a href="https://www.11ty.dev/" rel="nofollow">Eleventy</a> &amp;
-  <a
-    href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
-    rel="nofollow"
-    >Minimal Mistakes</a
-  >
+  <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>
   (adapted as
   <a href="https://github.com/quinnanya/eleven-mistakes">Eleven Mistakes</a>).
 </div>
