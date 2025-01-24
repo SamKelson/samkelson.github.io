@@ -30,7 +30,7 @@ const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
-    let pathPrefix = "/personal_website/";
+    let pathPrefix = "/";
 
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
     eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
@@ -357,7 +357,7 @@ module.exports = function (eleventyConfig) {
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
 
-        pathPrefix: "/personal_website/",
+        pathPrefix: pathPrefix,
 
         environment: "production",
 
@@ -374,7 +374,7 @@ module.exports = function (eleventyConfig) {
 };
 
 module.exports.config = {
-	pathPrefix: "/personal_website/",
+	pathPrefix: "/",
 }
 
 function numberOfWords(content) {
