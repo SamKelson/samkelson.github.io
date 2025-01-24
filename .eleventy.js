@@ -353,7 +353,7 @@ module.exports = function (eleventyConfig) {
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
 
-        pathPrefix,
+        pathPrefix: "/personal_website/",
 
         environment: "production",
 
