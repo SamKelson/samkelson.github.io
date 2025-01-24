@@ -35,6 +35,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
     eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
+
     eleventyConfig.addPlugin(pluginRss);
     //Blog excerpts
     eleventyConfig.addPlugin(description);
@@ -346,10 +348,7 @@ module.exports = function (eleventyConfig) {
     //     }
     // );
 
-    eleventyConfig.addFilter("absolute_url", absoluteUrl);
-
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
-    
+    eleventyConfig.addFilter("absolute_url", absoluteUrl);    
 
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
@@ -358,7 +357,6 @@ module.exports = function (eleventyConfig) {
 
         environment: "production",
 
-        // absolute_url: "https://www.quinndombrowski.com//",
         passthroughFileCopy: true,
 
         dir: {
@@ -367,8 +365,6 @@ module.exports = function (eleventyConfig) {
             includes: "includes",
             data: "data",
             output: "dist",
-            // input: "./", // Equivalent to Jekyll's source property
-            // output: "./_site", // Equivalent to Jekyll's destination property
         },
     };
 };
