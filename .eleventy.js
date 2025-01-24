@@ -209,7 +209,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
 
     // Processing configuration
-    eleventyConfig.addPassthroughCopy("src/favicon.ico");
+    eleventyConfig.addPassthroughCopy("src/assets/images/favicon/*");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/assets");
     // eleventyConfig.addPassthroughCopy({ "src/_sass": "assets/css" });
