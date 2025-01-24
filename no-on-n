@@ -12,7 +12,7 @@
 
 <!-- begin _includes/seo.html -->
 <title>Vote No on Measure N - Sam Kelson</title>
-<meta name="description" content="https://samkelson.github.io/personal_website/no-on-n  Meet Sam.    Sam is 11 months old...">
+<meta name="description" content="/no-on-n  Meet Sam.    Sam is 11 months old...">
 
 
 
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://samkelson.github.io/personal_website/no-on-n">
 
 
-  <meta property="og:description" content="https://samkelson.github.io/personal_website/no-on-n  Meet Sam.    Sam is 11 months old...">
+  <meta property="og:description" content="/no-on-n  Meet Sam.    Sam is 11 months old...">
 
 
 
@@ -156,7 +156,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://samkelson.github.io/personal_website/no-on-n" class="u-url" itemprop="url">Vote No on Measure N</a>
+            <a href="/no-on-n" class="u-url" itemprop="url">Vote No on Measure N</a>
           </h1>
           
 
