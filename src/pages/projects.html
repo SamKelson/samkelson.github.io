@@ -5,18 +5,7 @@ permalink: /projects/
 classes: wide
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          var grid = document.querySelector('.grid');
-          var msnry = new Masonry(grid, {
-            itemSelector: '.card',
-            columnWidth: 400,
-            fitWidth: true,
-            gutter: 20
-          });
-        });
-</script>
+
 
 <div class="grid" style="margin-top: 20px;">
   <!--
@@ -33,10 +22,28 @@ classes: wide
   {%- for project in collections.projects -%}
     <div class="card card--episode index{{ project.index }}">
       <div class="">
-        <div class="card__content" data-episode="{{ project.data.episode }}">
-          <a href="{{ project.url | url }}" class="card__title"><span>{{ project.data.title }}</span></a>
-          <p>{{ project.data.description }}</p>
-        </div>
-    </div>
+      <div class="card__image"></div>
+        <img src="{{ project.data.header.overlay_image }}" alt="{{ project.data.title }}">
+      </div>
+      <div class="card__content" data-episode="{{ project.data.episode }}">
+        <a href="{{ project.url | url }}" class="card__title"><span>{{ project.data.title }}</span></a>
+        <p>{{ project.data.description }}</p>
+      </div>
+      </div>
+    
   {% endfor %}
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var grid = document.querySelector('.grid');
+          var msnry = new Masonry(grid, {
+            itemSelector: '.card',
+            columnWidth: 400,
+            fitWidth: true,
+            gutter: 20
+          });
+        });
+</script>
