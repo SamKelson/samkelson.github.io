@@ -2,6 +2,14 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
+  // Masonry initialization
+  $('.grid').masonry({
+    itemSelector: '.card',
+    columnWidth: '.card',
+    percentPosition: true
+  });
+
+
 $(document).ready(function() {
   // FitVids init
   $("#main").fitVids();
@@ -133,10 +141,4 @@ $(document).ready(function() {
       $(this).append(anchor);
     }
   });
-});
-
-$('.grid').masonry({
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: 200
 });
