@@ -183,6 +183,7 @@ body {
     animation: $intro-transition;
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
+    background-attachment: fixed;
 
     a {
       color: #fff;

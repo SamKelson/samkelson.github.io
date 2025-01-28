@@ -6,7 +6,7 @@ classes: wide
 show_date: true
 header:
   overlay_image: /assets/images/404_panda.jpg
-  overlay_filter: 0.5
+  overlay_filter: 0.4
 description: "Teaching DH project management through living a year in the life of a DH project"
 ---
 
