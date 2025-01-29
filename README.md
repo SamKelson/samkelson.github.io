@@ -1,4 +1,4 @@
-# [Sam Kelson's webpage](https://samkelson.github.io/personal_website/)
+# [Sam Kelson's webpage](https://samkelson.github.io/)
 
 Built using Eleventy, adapting the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) Jekyll theme.
 
