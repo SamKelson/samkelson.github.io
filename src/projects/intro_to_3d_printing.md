@@ -8,7 +8,7 @@ toc: true
 toc_label: "Contents"
 header:
   //todo: fix header image
-  overlay_image: /assets/images/final_name_tag.jpg
+  overlay_image: /assets/images/final_nametag.jpg
   overlay_filter: 0.4
 description: "3D Printing a nametag and 3DBenchy"
 ---
