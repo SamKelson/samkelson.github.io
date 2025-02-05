@@ -279,12 +279,16 @@ module.exports = function (eleventyConfig) {
         jekyllInclude: true,
     });
 
+
     // Markdown Configuration
-    const md = require("markdown-it")({
-        html: true,
-        breaks: true,
-        linkify: true,
-    });
+    let MarkdownItOptions = {
+        html: true, // Enable HTML tags in source
+        breaks: true,  // Convert '\n' in paragraphs into <br>
+        linkify: true // Autoconvert URL-like text to links
+      };
+
+
+    const md = require("markdown-it")(MarkdownItOptions);
 
     const mdAnchorOpts = {
       permalink: false,
@@ -293,7 +297,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary(
         "md",
-        markdownIt()
+        markdownIt(MarkdownItOptions)
 
             .use(require("markdown-it-attrs"))
             .use(require("markdown-it-container"), "", {

@@ -8,15 +8,62 @@ toc: true
 toc_label: "Contents"
 header:
   //todo: fix header image
-  overlay_image: /assets/images/final_nametag.jpg
+  overlay_image: /assets/images/RemixingProject/FirstPrintAttemptFinish.jpg
   overlay_filter: 0.4
 description: "3D Printing a Remixed Cable Organizer"
 ---
 
 ## Introduction
 In this project, I explored the process of remixing 3D files to create novel 3D prints by modifying existing models and combining different designs for new functionality. Using CAD tools like Tinkercad and Autodesk Fusion, I imported a [publicly available 3D model](https://www.thingiverse.com/thing:4746510) and transformed it into a customized cable organizer by adding new features to improve its usability. This experience strengthened my ability to edit and remix digital designs, equipping me with the skills to leverage 3D printing and CAD software for creative problem-solving in engineering and design challenges.
-## Initial Sketch
+
+## The Problem
+Under my bed are storage drawers where I store my cloths and other items, and next to one of these drawers is an extension chord that I use to charge my devices. These various cables always end up getting traped into the drawer and it has caused the cables to break and fray. My goal is to make a cable organizer that I can stick to my wall to prevent the wires from getting stuck in the drawer.
+
+![The problem](/assets/images/RemixingProject/TheProblem.jpg)
+
+## Looking for a Solution
+
+My first step was to find an already made 3D model I could print to solve my problem. On [Thingiverse](https://www.thingiverse.com) I found [this model](https://www.thingiverse.com/thing:4746510) which met most of my requirments. However, because it was an `.stl` file I had trouble figuring out dimensions of things and I wanted to challenge myself by making a peice that had an opening in the center to allow cables to pass through and cable 'clips' at the top. 
+
+## Initial Model and Sketch
+
+Below is an intial sketch of what I want.
+
+![Sketch of what I want.](/assets/images/RemixingProject/Sketch.jpg)
 
 ## Setup on Tinkercad
 
-After sketching and getting a basic idea of what I wanted to remix about the initial design. I attempted to import the initial STL file into Tinkercad. This is where I ran into my first roadblock. The STL file that I had got was too large to be uploaded to Tinkercad directly. To fix this 
+After sketching and getting a basic idea of what I wanted to remix about the initial design. I attempted to import the initial `.stl` file into Tinkercad. This is where I ran into my first roadblock. The `.stl` file that I had got was too large to be uploaded to Tinkercad directly. To fix this I uploaded the file into Meshlab to reduce the number of vertices and faces in the file and thus reducing its size.
+
+![MeshLab Settings](/assets/images/RemixingProject/MeshLabSettings.png)
+
+I cut the number of faces in half and this was enough to allow me to upload the model into Tinkercad.
+
+![Inital Tinkercad](/assets/images/RemixingProject/TinkercadInit.png)
+
+The next task was to edit the peices of the organizer to fit my specifications. I wanted a peice that had an opening and a few small clips to put cables into. While the design already some components like this I wanted to create myself. 
+
+## Editing the Model on Tinkercad
+
+This process was a huge pain. When uploading to Tinkercad all the individual peices of the model were grouped together and in Tinkercad there is no easy way to seperate them. Therefore I followed [this tutorial](https://all3dp.com/2/tinkercad-split-object-models-tutorial/) to split the objects into individual peices. After doing this process I combined on of the peices without a center hole with one of the peices that had just a center hole. You can see the result here. 
+
+![Final Tinkercad](/assets/images/RemixingProject/TinkercadFinal.png)
+
+I then exporterd the result and procedded to Prusa Slicer.
+
+## Printing
+
+Within Prusa Slicer I had to scale the model to fit the print bed. Additionaly, to avoid bed adhesion problems I added rafts to the model. Here are pictures of the before and after slicing along with the print settings. 
+
+![Prusa Pre-Slice](/assets/images/RemixingProject/PrusaPreSlice.png)
+
+![Prusa Post-Slice](/assets/images/RemixingProject/PrusaPostSlice.png)
+
+Then I began the print process.
+
+![First Print Attempt Start](/assets/images/RemixingProject/FirstPrintAttemptStart.jpg)
+
+## Result and Reflection
+
+![First Print Attempt Finish](/assets/images/RemixingProject/FirstPrintAttemptFinish.jpg)
+
