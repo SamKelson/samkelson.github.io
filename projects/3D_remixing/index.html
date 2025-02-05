@@ -12,7 +12,7 @@
 
 <!-- begin _includes/seo.html -->
 <title>3D Remixing - Sam Kelson</title>
-<meta name="description" content="/projects/3D_remixing/  CONTENTS  1. Introduction 2. Initial Sketch 3. Setup on Tinkercad   INTRODUCTION  In this project, I explored the process of remixing 3D files to create novel 3D prints by modifying existing models and combining different designs for new functionality...">
+<meta name="description" content="/projects/3D_remixing/  CONTENTS  1. Introduction 2. The Problem 3. Looking for a Solution 4. Initial Model and Sketch 5. Setup on Tinkercad 6. Editing the Model on Tinkercad 7. Printing 8. Result and Reflection   INTRODUCTION  In this project...">
 
 
 
@@ -23,11 +23,11 @@
 <meta property="og:url" content="https://samkelson.github.io/projects/3D_remixing/">
 
 
-  <meta property="og:description" content="/projects/3D_remixing/  CONTENTS  1. Introduction 2. Initial Sketch 3. Setup on Tinkercad   INTRODUCTION  In this project, I explored the process of remixing 3D files to create novel 3D prints by modifying existing models and combining different designs for new functionality...">
+  <meta property="og:description" content="/projects/3D_remixing/  CONTENTS  1. Introduction 2. The Problem 3. Looking for a Solution 4. Initial Model and Sketch 5. Setup on Tinkercad 6. Editing the Model on Tinkercad 7. Printing 8. Result and Reflection   INTRODUCTION  In this project...">
 
 
 
-  <meta property="og:image" content="https://samkelson.github.io/assets/images/final_nametag.jpg">
+  <meta property="og:image" content="https://samkelson.github.io/assets/images/RemixingProject/FirstPrintAttemptFinish.jpg">
 
 
 
@@ -156,7 +156,7 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/images/final_nametag.jpg');"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/images/RemixingProject/FirstPrintAttemptFinish.jpg');"
 >
   
     <div class="wrapper">
@@ -208,16 +208,39 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
               <div class="toc__menu" >
-        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#initial-sketch">Initial Sketch</a></li><li><a href="#setup-on-tinkercad">Setup on Tinkercad</a></li></ol>
+        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#the-problem">The Problem</a></li><li><a href="#looking-for-a-solution">Looking for a Solution</a></li><li><a href="#initial-model-and-sketch">Initial Model and Sketch</a></li><li><a href="#setup-on-tinkercad">Setup on Tinkercad</a></li><li><a href="#editing-the-model-on-tinkercad">Editing the Model on Tinkercad</a></li><li><a href="#printing">Printing</a></li><li><a href="#result-and-reflection">Result and Reflection</a></li></ol>
       </div>
             </nav>
           </aside>
         
         <h2 id="introduction" tabindex="-1">Introduction</h2>
 <p>In this project, I explored the process of remixing 3D files to create novel 3D prints by modifying existing models and combining different designs for new functionality. Using CAD tools like Tinkercad and Autodesk Fusion, I imported a <a href="https://www.thingiverse.com/thing:4746510">publicly available 3D model</a> and transformed it into a customized cable organizer by adding new features to improve its usability. This experience strengthened my ability to edit and remix digital designs, equipping me with the skills to leverage 3D printing and CAD software for creative problem-solving in engineering and design challenges.</p>
-<h2 id="initial-sketch" tabindex="-1">Initial Sketch</h2>
+<h2 id="the-problem" tabindex="-1">The Problem</h2>
+<p>Under my bed are storage drawers where I store my cloths and other items, and next to one of these drawers is an extension chord that I use to charge my devices. These various cables always end up getting traped into the drawer and it has caused the cables to break and fray. My goal is to make a cable organizer that I can stick to my wall to prevent the wires from getting stuck in the drawer.</p>
+<p><img src="/assets/images/RemixingProject/TheProblem.jpg" alt="The problem"></p>
+<h2 id="looking-for-a-solution" tabindex="-1">Looking for a Solution</h2>
+<p>My first step was to find an already made 3D model I could print to solve my problem. On <a href="https://www.thingiverse.com">Thingiverse</a> I found <a href="https://www.thingiverse.com/thing:4746510">this model</a> which met most of my requirments. However, because it was an <code>.stl</code> file I had trouble figuring out dimensions of things and I wanted to challenge myself by making a peice that had an opening in the center to allow cables to pass through and cable 'clips' at the top.</p>
+<h2 id="initial-model-and-sketch" tabindex="-1">Initial Model and Sketch</h2>
+<p>Below is an intial sketch of what I want.</p>
+<p><img src="/assets/images/RemixingProject/Sketch.jpg" alt="Sketch of what I want."></p>
 <h2 id="setup-on-tinkercad" tabindex="-1">Setup on Tinkercad</h2>
-<p>After sketching and getting a basic idea of what I wanted to remix about the initial design. I attempted to import the initial STL file into Tinkercad. This is where I ran into my first roadblock. The STL file that I had got was too large to be uploaded to Tinkercad directly. To fix this</p>
+<p>After sketching and getting a basic idea of what I wanted to remix about the initial design. I attempted to import the initial <code>.stl</code> file into Tinkercad. This is where I ran into my first roadblock. The <code>.stl</code> file that I had got was too large to be uploaded to Tinkercad directly. To fix this I uploaded the file into Meshlab to reduce the number of vertices and faces in the file and thus reducing its size.</p>
+<p><img src="/assets/images/RemixingProject/MeshLabSettings.png" alt="MeshLab Settings"></p>
+<p>I cut the number of faces in half and this was enough to allow me to upload the model into Tinkercad.</p>
+<p><img src="/assets/images/RemixingProject/TinkercadInit.png" alt="Inital Tinkercad"></p>
+<p>The next task was to edit the peices of the organizer to fit my specifications. I wanted a peice that had an opening and a few small clips to put cables into. While the design already some components like this I wanted to create myself.</p>
+<h2 id="editing-the-model-on-tinkercad" tabindex="-1">Editing the Model on Tinkercad</h2>
+<p>This process was a huge pain. When uploading to Tinkercad all the individual peices of the model were grouped together and in Tinkercad there is no easy way to seperate them. Therefore I followed <a href="https://all3dp.com/2/tinkercad-split-object-models-tutorial/">this tutorial</a> to split the objects into individual peices. After doing this process I combined on of the peices without a center hole with one of the peices that had just a center hole. You can see the result here.</p>
+<p><img src="/assets/images/RemixingProject/TinkercadFinal.png" alt="Final Tinkercad"></p>
+<p>I then exporterd the result and procedded to Prusa Slicer.</p>
+<h2 id="printing" tabindex="-1">Printing</h2>
+<p>Within Prusa Slicer I had to scale the model to fit the print bed. Additionaly, to avoid bed adhesion problems I added rafts to the model. Here are pictures of the before and after slicing along with the print settings.</p>
+<p><img src="/assets/images/RemixingProject/PrusaPreSlice.png" alt="Prusa Pre-Slice"></p>
+<p><img src="/assets/images/RemixingProject/PrusaPostSlice.png" alt="Prusa Post-Slice"></p>
+<p>Then I began the print process.</p>
+<p><img src="/assets/images/RemixingProject/FirstPrintAttemptStart.jpg" alt="First Print Attempt Start"></p>
+<h2 id="result-and-reflection" tabindex="-1">Result and Reflection</h2>
+<p><img src="/assets/images/RemixingProject/FirstPrintAttemptFinish.jpg" alt="First Print Attempt Finish"></p>
 
         
       </section>
