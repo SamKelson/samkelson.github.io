@@ -12,7 +12,7 @@
 
 <!-- begin _includes/seo.html -->
 <title>3D Remixing - Sam Kelson</title>
-<meta name="description" content="/projects/3D_remixing/  CONTENTS  1. Introduction 2. The Problem 3. Looking for a Solution 4. Initial Model and Sketch 5. Setup on Tinkercad 6. Editing the Model on Tinkercad 7. Printing 8. Result and Reflection   INTRODUCTION  In this project...">
+<meta name="description" content="/projects/3D_remixing/  CONTENTS  1.  Introduction 2.  The Problem 3.  Looking for a Solution 4.  Initial Model and Sketch 5.  Setup on Tinkercad 6.  Editing the Model on Tinkercad 7.  Printing 8...">
 
 
 
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://samkelson.github.io/projects/3D_remixing/">
 
 
-  <meta property="og:description" content="/projects/3D_remixing/  CONTENTS  1. Introduction 2. The Problem 3. Looking for a Solution 4. Initial Model and Sketch 5. Setup on Tinkercad 6. Editing the Model on Tinkercad 7. Printing 8. Result and Reflection   INTRODUCTION  In this project...">
+  <meta property="og:description" content="/projects/3D_remixing/  CONTENTS  1.  Introduction 2.  The Problem 3.  Looking for a Solution 4.  Initial Model and Sketch 5.  Setup on Tinkercad 6.  Editing the Model on Tinkercad 7.  Printing 8...">
 
 
 
@@ -90,6 +90,17 @@
 <link rel="shortcut icon" href="../../assets/images/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicon/apple-touch-icon.png" />
 <link rel="manifest" href="../../assets/images/favicon/site.webmanifest" />
+
+<script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    
 
 <!-- end custom head snippets -->
 
@@ -208,7 +219,7 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
               <div class="toc__menu" >
-        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#the-problem">The Problem</a></li><li><a href="#looking-for-a-solution">Looking for a Solution</a></li><li><a href="#initial-model-and-sketch">Initial Model and Sketch</a></li><li><a href="#setup-on-tinkercad">Setup on Tinkercad</a></li><li><a href="#editing-the-model-on-tinkercad">Editing the Model on Tinkercad</a></li><li><a href="#printing">Printing</a></li><li><a href="#result-and-reflection">Result and Reflection</a></li></ol>
+        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#the-problem">The Problem</a></li><li><a href="#looking-for-a-solution">Looking for a Solution</a></li><li><a href="#initial-model-and-sketch">Initial Model and Sketch</a></li><li><a href="#setup-on-tinkercad">Setup on Tinkercad</a></li><li><a href="#editing-the-model-on-tinkercad">Editing the Model on Tinkercad</a></li><li><a href="#printing">Printing</a></li><li><a href="#result-and-reflection">Result and Reflection</a></li><li><a href="#learning-autodesk-fusion">Learning Autodesk Fusion</a></li><li><a href="#attempting-to-import-into-autodesk-fusion">Attempting to Import into Autodesk Fusion</a></li><li><a href="#making-the-dovetails">Making the Dovetails</a></li><li><a href="#a-test-print">A Test Print</a></li><li><a href="#final-print">Final Print</a></li></ol>
       </div>
             </nav>
           </aside>
@@ -234,13 +245,34 @@
 <p><img src="/assets/images/RemixingProject/TinkercadFinal.png" alt="Final Tinkercad"></p>
 <p>I then exporterd the result and procedded to Prusa Slicer.</p>
 <h2 id="printing" tabindex="-1">Printing</h2>
-<p>Within Prusa Slicer I had to scale the model to fit the print bed. Additionaly, to avoid bed adhesion problems I added rafts to the model. Here are pictures of the before and after slicing along with the print settings.</p>
+<p>Within Prusa Slicer I had to scale the model to fit the print bed (this would cause problems later). Additionaly, to avoid bed adhesion problems I added rafts to the model. Here are pictures of the before and after slicing along with the print settings.</p>
 <p><img src="/assets/images/RemixingProject/PrusaPreSlice.png" alt="Prusa Pre-Slice"></p>
 <p><img src="/assets/images/RemixingProject/PrusaPostSlice.png" alt="Prusa Post-Slice"></p>
 <p>Then I began the print process.</p>
 <p><img src="/assets/images/RemixingProject/FirstPrintAttemptStart.jpg" alt="First Print Attempt Start"></p>
 <h2 id="result-and-reflection" tabindex="-1">Result and Reflection</h2>
 <p><img src="/assets/images/RemixingProject/FirstPrintAttemptFinish.jpg" alt="First Print Attempt Finish"></p>
+<p>The results were a bit hit or miss. The main problem I found was the tolerances of the dovetails were not enough to take into acount the resolution of the printer and the thermal expansion of the filament as can be seen by this photo, the dovetails did not fit.</p>
+<p><img src="/assets/images/RemixingProject/DoesntFit.jpg" alt="Does not fit"></p>
+<p>Aditionaly, as can be in the result photo above the scaling I did in Prusa Slicer caused the cable clips to shrink dramatically making them thinner and easier to snap off along with radius of the clips being too small to fit any useful cables. Other than that things were mostly sucesfful. To improve on some of these problems it would be nessecary to closly monitor the dimensions of all these components, especially the dovetails.</p>
+<p>Now for an attempt in Autodesk Fusion.</p>
+<h2 id="learning-autodesk-fusion" tabindex="-1">Learning Autodesk Fusion</h2>
+<p>Before attempting the cable organizer in Fusion I first went throught <a href="https://www.autodesk.com/learn/ondemand/course/learn-fusion-for-cad-in-90-minutes">this series of tutorials.</a> Through these tutorials I began to really enjoy 3D modeling and while it was a bit challenging I found myself excitedly completing the entire tutorial. CAD is fun!</p>
+<h2 id="attempting-to-import-into-autodesk-fusion" tabindex="-1">Attempting to Import into Autodesk Fusion</h2>
+<p>This is where the real challenge began. After importing the <code>.stl</code> file into Fusion I quickly realised that the object was imported as a mesh rather than as bodies. This happened because <code>.stl</code> files store meshes rather than bodies, therefore in order to work in Fusion I would need to convert from meshes to bodies. This is easier said then done and while <a href="https://help.autodesk.com/view/fusion360/ENU/?guid=MESH-CONVERT-TO-SOLID">there are tools</a> for this, they did not work very well for me. Therefore after using some of the mesh tools provided by Fusion to split up each peice into its individual mesh I was forced to project the intial components onto a flat plane (sketch) and rebuild everything from scratch, resketching and extruding when nessecary to create edidtable objects. I decided to delete the dovetails and remake them myself so I could add spaces to account for unkown tolerances of the printer. Here is an image of the sketch from the projection before removing the old dovetails. A keen observer would notice that none of the lines here are actual shapes editable by Fusion, instead they are custom geometrecies meaning I have no control over their shapes (besides basic scaling) unless I fully redraw them using shapes native to Fusion.</p>
+<p><img src="/assets/images/RemixingProject/FusionProjection.png" alt="Projection"></p>
+<h2 id="making-the-dovetails" tabindex="-1">Making the Dovetails</h2>
+<p><img src="/assets/images/RemixingProject/FusionNoDovetails.png" alt="No Dovetails"></p>
+<p>I followed these two tutorials (<a href="https://www.makeorbreakshop.com/project/design-dovetail-joint-in-fusion-360">makeorbreakshop</a> and <a href="https://productdesignonline.com/fusion-360-tutorials/parametric-dovetail-joints-in-fusion-360-made-easy/">productdesignonline</a>) for making the dovetails. They both make use of user defined parameters which I find to be an amazing feature of Fusion and allowed me to follow the tutorials without worrying about dimensions until I had finished the setup and allowed changes to be made super easily.</p>
+<p>I additionaly added a paremeter to control an extra extrude that made a controllable gap between the pin and the socket of the dove tail.</p>
+<p><img src="/assets/images/RemixingProject/tolerances.png" alt="Dovetail Tolerance"></p>
+<p>I initally set this paramter to $0.02$ inches. I then copied the pinboard and attatched it to each individual component.</p>
+<p>Here is an image of the finished project in Fusion, you can see a lot of steps went into the creation process which involed a lot sketching, extruding, and aligning.</p>
+<p><img src="/assets/images/RemixingProject/FusionFinish.png" alt="Fusion Finish"></p>
+<h2 id="a-test-print" tabindex="-1">A Test Print</h2>
+<p>To test the tolerances and make sure everything aligned and fit I printed a single component and the tailboard (I will show Slicer settings momentairly). Here is the result and you can see that everything fits allbeit a bit loose.</p>
+<p><img src="/assets/images/RemixingProject/FusionTestPrintSideTop.jpg" alt="Test Print"></p>
+<h2 id="final-print" tabindex="-1">Final Print</h2>
 
         
       </section>
