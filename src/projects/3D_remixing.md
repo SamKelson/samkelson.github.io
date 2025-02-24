@@ -1,6 +1,6 @@
 ---
 permalink: /projects/3D_remixing/
-title: "3D Remixing"
+title: "ENGR11a: 3D Remixing"
 date: 2024-02-04
 classes: wide
 show_date: true

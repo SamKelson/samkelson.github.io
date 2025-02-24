@@ -1,6 +1,6 @@
 ---
 permalink: /projects/intro_to_3d_printing/
-title: "Intro to 3D Printing"
+title: "ENGR11a: Intro to 3D Printing"
 date: 2024-01-28
 classes: wide
 show_date: true
