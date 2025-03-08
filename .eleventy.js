@@ -315,6 +315,7 @@ module.exports = function (eleventyConfig) {
             .use(require("markdown-it-footnote"))
 
             .use(markdownItAnchor, mdAnchorOpts)
+            .use(imageLocationFixer)
     );
 
     // override markdown-it-footnote anchor template to use a different unicode character
@@ -376,6 +377,27 @@ module.exports = function (eleventyConfig) {
         },
     };
 };
+
+// Custom markdown-it plugin to process image tokens
+function imageLocationFixer(md) {
+    md.core.ruler.push("image_location_fixer", function (state) {
+        state.tokens.forEach(function (blockToken) {
+            if (blockToken.type === "inline" && blockToken.children) {
+                blockToken.children.forEach(function (token) {
+                    if (token.type === "image") {
+                        // Modify the token attributes or content as needed
+                        // Strip the dots from the image src
+                        let src = token.attrGet("src");
+                        if (src.startsWith("../")) {
+                            src = src.replace(/^\.\.\//, "/");
+                            token.attrSet("src", src);
+                        }
+                    }
+                });
+            }
+        });
+    });
+}
 
 module.exports.config = {
 	pathPrefix: "/",

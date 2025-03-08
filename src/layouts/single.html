@@ -35,7 +35,8 @@ layout: default.html
 
       <section class="page__content e-content" itemprop="text">
         {% if toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+        <!-- ToDo: something is fucky here and not sure why the below doesnt work for the if, overiding for now -->
+          <aside class="sidebar__right sticky {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ toc_label | default: "On this page" }}</h4></header>
               {{ content | toc: '{"tags":["h2","h3"],"wrapper":"div","wrapperClass":"toc__menu"}' }}
