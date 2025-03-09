@@ -12,7 +12,7 @@
 
 <!-- begin _includes/seo.html -->
 <title>ENGR11a: Robotic Tracking Car Enclosure - Sam Kelson</title>
-<meta name="description" content="/projects/robotic_tracking_car_enclosure/  CONTENTS  1. Introduction 2. Robot Assembly 3. Measurements   INTRODUCTION  For this project, I explored the fundamentals of electronics prototyping, integrating soldering and component assembly with iterative design processes...">
+<meta name="description" content="/projects/robotic_tracking_car_enclosure/  CONTENTS  1.  Introduction 2.  Robot Assembly 3.  Measurements 4.  Designing on Fusion 5.  Getting the Fit Right 6.  Reflection on 3D Printing 7.  Laser Cutting an Enclosure 8...">
 
 
 
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://samkelson.github.io/projects/robotic_tracking_car_enclosure/">
 
 
-  <meta property="og:description" content="/projects/robotic_tracking_car_enclosure/  CONTENTS  1. Introduction 2. Robot Assembly 3. Measurements   INTRODUCTION  For this project, I explored the fundamentals of electronics prototyping, integrating soldering and component assembly with iterative design processes...">
+  <meta property="og:description" content="/projects/robotic_tracking_car_enclosure/  CONTENTS  1.  Introduction 2.  Robot Assembly 3.  Measurements 4.  Designing on Fusion 5.  Getting the Fit Right 6.  Reflection on 3D Printing 7.  Laser Cutting an Enclosure 8...">
 
 
 
@@ -220,7 +220,7 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
               <div class="toc__menu" >
-        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#robot-assembly">Robot Assembly</a></li><li><a href="#measurements">Measurements</a></li></ol>
+        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#robot-assembly">Robot Assembly</a></li><li><a href="#measurements">Measurements</a></li><li><a href="#designing-on-fusion">Designing on Fusion</a></li><li><a href="#getting-the-fit-right">Getting the Fit Right</a></li><li><a href="#reflection-on-3d-printing">Reflection on 3D Printing</a></li><li><a href="#laser-cutting-an-enclosure">Laser Cutting an Enclosure</a></li><li><a href="#reflection-on-laser-cutting">Reflection on Laser Cutting</a></li><li><a href="#introduction-1">Introduction</a></li><li><a href="#robot-assembly-1">Robot Assembly</a></li><li><a href="#measurements-1">Measurements</a></li><li><a href="#designing-in-fusion-360">Designing in Fusion 360</a></li><li><a href="#iterating-for-fit">Iterating for Fit</a></li><li><a href="#reflections-on-3d-printing">Reflections on 3D Printing</a></li><li><a href="#laser-cutting-an-enclosure-1">Laser Cutting an Enclosure</a></li><li><a href="#conclusion">Conclusion</a></li></ol>
       </div>
             </nav>
           </aside>
@@ -238,12 +238,121 @@
 <p><img src="/assets/images/RobotCarProj/LEDFix.jpg" alt="LED Fix (covered in hot glue)"></p>
 <p>The final hurtle to jump was getting the worm gear to drive the wheels properly. This is one area where I believe the instruction manual was lacking. In order for the motors to give the wheels enough torque to move the car the teeth of the worm gear had to mesh well with the teeth of the gear on the axle. This was harder said then done as there was a good amount of play between the various parts that make up the drive train. The most useful tip I found was to tightened down the screws attaching the three way sleeve to the PCB after an initial assembly as much as possible. Also, I feel another pair of gaskets to prevent the gear and axle assembly from moving would be helpful.</p>
 <p>Here is a video of the bot moving along a track:</p>
-<p><video controls src="/assets/images/RobotCarProj/CarMoving.mp4" title="Car on Track" style='width: -webkit-fill-available'></video></p>
+<p><video controls src="/assets/images/RobotCarProj/CarMoving.mp4" title="Car on Track" ></video></p>
 <h2 id="measurements" tabindex="-1">Measurements</h2>
 <p>For the next part of the project we needed the dimensions of the PCB so we could model it in Fusion and make a chassis enclosure. I used digital calipers to take measurements.</p>
 <p><img src="/assets/images/RobotCarProj/TakingMeasurements.jpg" alt="Taking Measurements"></p>
 <p>And here are all of them imported into Fusion as parameters.</p>
 <p><img src="/assets/images/RobotCarProj/Measurements.png" alt="Measurements"></p>
+<h2 id="designing-on-fusion" tabindex="-1">Designing on Fusion</h2>
+<p>Using these parameters along with importing an image of the PCB into Fusion as a canvas I was able to create an initial sketch of the PCB.</p>
+<p><img src="/assets/images/RobotCarProj/BaseChasisSketch.png" alt="Base PCB Sketch"></p>
+<p>Extruding upward, we made our first model which we then preceded to print.</p>
+<p><img src="/assets/images/RobotCarProj/First3DPrint_Fusion.png" alt="First Enclosure Iteration"></p>
+<p>Using the default settings in Prusa slicer:</p>
+<p><img src="/assets/images/RobotCarProj/PrusaDefaults.png" alt="Prusa Slicer Default Settings"></p>
+<p>The first iteration of enclosure is shown below:</p>
+<p><img src="/assets/images/RobotCarProj/FirstIterationPrint.jpg" alt="First Iteration Enclosure"></p>
+<h2 id="getting-the-fit-right" tabindex="-1">Getting the Fit Right</h2>
+<p>As you can see the enclosure does not fit around the components on the PCB. This happened because when I extruded the sketch to make the thickness of the box I extruded inwards instead of outwards, making the box too small. Additionally, because of this error, I was unable to test other aspects of the fit including the extrusions to cover the lights and the width to not interfere with the wheel. On our next iteration we changed the extrusion direction and was able to test more aspects of the fit.</p>
+<p>We forgot to take pictures of this second iteration, but we were able to quickly diagnose other issues with the fit. These included interference between the case and the wheels and squeezing around the front headlights and other components on the front of the car.</p>
+<p>For the next iteration we added wheel cutouts and a cutout to access the on/off switch. This was done by adding sketches onto the faces of main body and then extruding.</p>
+<p><img src="/assets/images/RobotCarProj/WheelCutouts.png" alt="Wheel Cutouts in Fusion"></p>
+<p>Thus we arrived at our third iteration:</p>
+<p><img src="/assets/images/RobotCarProj/ThirdIterationPrint.jpg" alt="Third Iteration"></p>
+<p>One problem we continued to have was the fit of the wheels along with the length of the body itself. We did not think enough about where the enclosure would rest on the body and so the resting position of the enclosure changed through our iterations. Furthermore, it was challenging to make the models without having the car and a pair of calipers in front of us as often changes were made after class and then printed when we got to class. This made it challenging to iterate as iteration cycles were fairly long. An additional challenge was taking into account various tolerances of the printer and measurements we may have not thought we needed until later, such as the wheel cutouts. In hindsight, due to our longer iteration cycles, it would have been better to measure twice and print once.</p>
+<p>In our next iteration we added cutouts for the lights and extended the cutout for the switch to the back of the enclosure.</p>
+<p><img src="/assets/images/RobotCarProj/LightsCutout.png" alt="Lights Cutout"></p>
+<p>As an aesthetic choice we also pasted <a href="https://www.thingiverse.com/thing:5397647">the top section of the Mystery Machine from Scooby-Doo</a> on to the top of the car.</p>
+<p><img src="/assets/images/RobotCarProj/MysteryMachineFusion.png" alt="Mystery Machine ENclosure on Fusion"></p>
+<p>In Prusa Slicer we flipped the design on to the roof of the car (something we did for all prints so it would print faster and without the need for supports), added supports on the base plate to account for the angle of the mystery machines roof and printed.</p>
+<p><img src="/assets/images/RobotCarProj/MysteryMachineIteration1.jpg" alt="Mystery Machine Print 1"></p>
+<p>As you can see from the picture the fit is pretty good except that the case is still too long and the front edge does not rest on the PCB as, I realized, is desired.</p>
+<p>We did one final iteration with a better fit that I will show later on.</p>
+<p>As a quick note, our intended way of accessing the batteries with this enclosure was to simply lift the case off the PCB. All other requirements for movement, LED and switch access were met.</p>
+<h2 id="reflection-on-3d-printing" tabindex="-1">Reflection on 3D Printing</h2>
+<p>Overall the process of 3D printing was very smooth and the only main issues were the slow iteration times I mentioned earlier.</p>
+<h2 id="laser-cutting-an-enclosure" tabindex="-1">Laser Cutting an Enclosure</h2>
+<p>In the next part of this project we designed and laser cut a box to fit around the chassis. This was a opportunity to learn the limitations and advantages of another type of manufacturing, laser cutting!</p>
+<p>Following the same tutorial as for my <a href="https://samkelson.github.io/projects/3D_remixing/">previous project</a> on creating a box using dovetails by <a href="https://productdesignonline.com/fusion-360-tutorials/parametric-dovetail-joints-in-fusion-360-made-easy/">Product Design Online</a> I created a box to surround the car that would rest on top of the PCB. I initially started with the tutorial linked in the instructions but found it to be very inefficient as it did not make use of the patterning system in Fusion. I imported the parameters I used for the 3D print version of the enclosure with a few additions for the dovetails and then went to work.</p>
+<p><img src="/assets/images/RobotCarProj/LaserCutBoxParams.png" alt="Laser Cut Box Params"></p>
+<p>As I was not sure how well dovetails would work I opted to set the dovetail angle to zero, creating finger joints instead.</p>
+<p><img src="/assets/images/RobotCarProj/LaserCutBoxFusion.png" alt="Laser Cut Box Design in Fusion"></p>
+<p>After importing into Lightburn and learning how to laser cut and get familiar with safety procedures, I printed our first iteration.</p>
+<p><img src="/assets/images/RobotCarProj/BoxInLaserCutter.jpg" alt="Laser Cut Box in Laser Cutter"></p>
+<p>We accidentally printed in Acrylic which while looking nice was a very hard to assemble and glue.</p>
+<p><img src="/assets/images/RobotCarProj/AssemblyStruggles.jpg" alt="Assembly Struggles with Glueing"></p>
+<p>After attempting to glue with superglue we switched to hot glue which worked much better. After our first iteration, the fit was a bit tight, mainly around the LEDs, so we recut and things looked much better.</p>
+<p>With the help of a classmate we also cut holes in the top of the enclosure to access the batteries and switches.</p>
+<p><img src="/assets/images/RobotCarProj/LaserCuttingSwitch.jpg" alt="Laser cutting the acrylic box to have hole for switch and battery access."></p>
+<p>Here is the final product!</p>
+<p><img src="/assets/images/RobotCarProj/FinalLaserCutBox.jpg" alt="Final Laser Cut Box"></p>
+<p>As you can see the fit is perfect!</p>
+<h2 id="reflection-on-laser-cutting" tabindex="-1">Reflection on Laser Cutting</h2>
+<p>Laser cutting was a fun process to learn and it was amazing at how fast we could iterate from design to design. This made getting a good fit a lot easier. On the other hand, it did require some self assembly which was a bit challenging. Additionally, the design was fairly basic and there is not much room for creativity compared to 3D printing.</p>
+<h2 id="introduction-1" tabindex="-1">Introduction</h2>
+<p>This project introduced the fundamentals of electronics prototyping, integrating soldering, component assembly, and iterative design. Working in a team, we designed and fabricated a custom chassis enclosure for a robotic tracking car, focusing on form, fit, and function through multiple design iterations. Using Autodesk Fusion 360, we developed CAD models and utilized both 3D printing and laser cutting to refine our designs. Key challenges included ensuring accessibility for sensors, wheels, and power components while maintaining the overall fit of the enclosure. This hands-on experience strengthened my skills in rapid prototyping, digital fabrication, and collaborative design.</p>
+<h2 id="robot-assembly-1" tabindex="-1">Robot Assembly</h2>
+<p>For the first stage, my group assembled individual D2-5 Intelligent Tracking Car DIY kit robots following <a href="https://m.media-amazon.com/images/I/A1lEYFXJO1L.pdf#page=1&amp;zoom=auto,-83,848">these instructions</a>. The instruction manual included helpful visuals, making it easier to understand part placement. However, the drive shaft assembly section was unclear, particularly regarding the worm gear's fit, which later became an issue.</p>
+<p>The process began with soldering, a skill I was familiar with but was new for some of my teammates. With occasional guidance, everyone successfully soldered their circuit boards.</p>
+<p><img src="/assets/images/RobotCarProj/MeSoldering.jpg" alt="Me Soldering"></p>
+<p>The main challenge in electronic assembly was ensuring all components were correctly oriented, particularly LEDs, capacitors, and transistors. Additionally, some soldering iron tips performed better than others, and setting the correct temperature was tricky. The most critical challenge, even for experienced solderers, was avoiding excessive heat application, which could detach solder pads from the PCB.</p>
+<p>When I first powered my car, I noticed that one of the LEDs was not working.</p>
+<p><img src="/assets/images/RobotCarProj/LEDNotOn.jpg" alt="LED Not Working"></p>
+<p>Using a multimeter and an external battery, I identified a faulty capacitor disrupting the circuit. While attempting to replace it, I accidentally desoldered both capacitor pads, seemingly ruining the board. However, by analyzing the circuit diagram, I bypassed the capacitor with wires, restoring functionality. To prevent accidental contact, I secured the fix with hot glue.</p>
+<p><img src="/assets/images/RobotCarProj/LEDFix.jpg" alt="LED Fix (covered in hot glue)"></p>
+<p>The final challenge was ensuring proper engagement between the worm gear and wheel axle. The instruction manual lacked sufficient guidance on this step. Proper torque transfer required careful alignment, which was complicated by play between drivetrain components. The best solution was to tighten the three-way sleeve screws after initial assembly and it would have been nice to add extra gaskets to reduce unwanted movement.</p>
+<p>Here’s a video of the car moving along a track:</p>
+<p><video controls src="/assets/images/RobotCarProj/CarMoving.mp4" title="Car on Track"></video></p>
+<h2 id="measurements-1" tabindex="-1">Measurements</h2>
+<p>To design the chassis enclosure, we needed precise PCB measurements, which I took using digital calipers.</p>
+<p><img src="/assets/images/RobotCarProj/TakingMeasurements.jpg" alt="Taking Measurements"></p>
+<p>These measurements were then imported into Fusion 360 as parameters.</p>
+<p><img src="/assets/images/RobotCarProj/Measurements.png" alt="Measurements"></p>
+<h2 id="designing-in-fusion-360" tabindex="-1">Designing in Fusion 360</h2>
+<p>Using these parameters and a reference image of the PCB, I created an initial sketch in Fusion 360.</p>
+<p><img src="/assets/images/RobotCarProj/BaseChasisSketch.png" alt="Base PCB Sketch"></p>
+<p>After extruding the sketch, we produced our first 3D model.</p>
+<p><img src="/assets/images/RobotCarProj/First3DPrint_Fusion.png" alt="First Enclosure Iteration"></p>
+<p>Using default Prusa Slicer settings:</p>
+<p><img src="/assets/images/RobotCarProj/PrusaDefaults.png" alt="Prusa Slicer Default Settings"></p>
+<p>Here’s the first 3D-printed enclosure:</p>
+<p><img src="/assets/images/RobotCarProj/FirstIterationPrint.jpg" alt="First Iteration Enclosure"></p>
+<h2 id="iterating-for-fit" tabindex="-1">Iterating for Fit</h2>
+<p>The first enclosure did not fit correctly due to an extrusion direction error, making it too small. This prevented proper testing of component clearances, including LED covers and wheel gaps. For the next iteration, we corrected the extrusion and made additional adjustments.</p>
+<p>Although we didn’t document the second iteration with photos, it helped us identify other fit issues, such as wheel interference and inadequate front light clearance.</p>
+<p>For the third iteration, we added wheel cutouts and an accessible power switch slot.</p>
+<p><img src="/assets/images/RobotCarProj/WheelCutouts.png" alt="Wheel Cutouts in Fusion"></p>
+<p>Resulting in this improved version:</p>
+<p><img src="/assets/images/RobotCarProj/ThirdIterationPrint.jpg" alt="Third Iteration"></p>
+<p>One persistent challenge was determining the enclosure’s resting position relative to the PCB. Because modifications to the design were made outside of class, iteration cycles were long, making adjustments difficult. Additionally, accounting for 3D printer tolerances and unforeseen measurement needs—such as precise wheel clearances—proved challenging. In hindsight, more upfront measurements would have streamlined the process.</p>
+<p>In the final iteration, we added cutouts for the LEDs and extended the switch cutout to improve accessibility.</p>
+<p><img src="/assets/images/RobotCarProj/LightsCutout.png" alt="Lights Cutout"></p>
+<p>For aesthetics, we incorporated <a href="https://www.thingiverse.com/thing:5397647">the Mystery Machine design from Scooby-Doo</a> onto the top of the car.</p>
+<p><img src="/assets/images/RobotCarProj/MysteryMachineFusion.png" alt="Mystery Machine Enclosure in Fusion"></p>
+<p>We flipped the model onto the top in Prusa Slicer for faster and more stable printing (something we did throughout) and added build plate supports.</p>
+<p><img src="/assets/images/RobotCarProj/MysteryMachineIteration1.jpg" alt="Mystery Machine Print 1"></p>
+<p>The fit improved, but the enclosure was still slightly too long. One final iteration refined this.</p>
+<p>To access the batteries, the enclosure was designed for easy removal. All movement, LED visibility, and switch access requirements were met.</p>
+<h2 id="reflections-on-3d-printing" tabindex="-1">Reflections on 3D Printing</h2>
+<p>Overall, the 3D printing process was smooth. The main drawback was the slow iteration cycle, which made refining the fit challenging.</p>
+<h2 id="laser-cutting-an-enclosure-1" tabindex="-1">Laser Cutting an Enclosure</h2>
+<p>For the next phase, we designed a laser-cut enclosure, learning the advantages and constraints of this type of subtractive manufacturing.</p>
+<p>Following a <a href="https://productdesignonline.com/fusion-360-tutorials/parametric-dovetail-joints-in-fusion-360-made-easy/">Fusion 360 dovetail box tutorial</a>, I created a box that would rest on the PCB. I found the assignment’s suggested tutorial inefficient and instead used Fusion 360’s patterning system for faster iteration.</p>
+<p><img src="/assets/images/RobotCarProj/LaserCutBoxParams.png" alt="Laser Cut Box Parameters"></p>
+<p>To simplify assembly, I opted for finger joints instead of dovetails by setting the dovetail angle to zero.</p>
+<p><img src="/assets/images/RobotCarProj/LaserCutBoxFusion.png" alt="Laser Cut Box Design in Fusion"></p>
+<p>After learning Lightburn and laser cutting procedures, we produced our first prototype.</p>
+<p><img src="/assets/images/RobotCarProj/BoxInLaserCutter.jpg" alt="Laser Cut Box in Laser Cutter"></p>
+<p>We accidentally printed in Acrylic which while looking nice was a very hard to assemble and glue.</p>
+<p><img src="/assets/images/RobotCarProj/AssemblyStruggles.jpg" alt="Assembly Struggles with Glueing"></p>
+<p>Hot glue proved more effective than superglue due to faster drying times as we did not know about the quick drying spray. In the second iteration, we improved fit around the LEDs and refined component access.</p>
+<p>With a classmate’s help, we laser-cut access holes for the battery and switch.</p>
+<p><img src="/assets/images/RobotCarProj/LaserCuttingSwitch.jpg" alt="Laser Cutting the Switch Hole"></p>
+<p>Final version:</p>
+<p><img src="/assets/images/RobotCarProj/FinalLaserCutBox.jpg" alt="Final Laser Cut Box"></p>
+<h2 id="conclusion" tabindex="-1">Conclusion</h2>
+<p>This project provided valuable hands-on experience with both additive and subtractive manufacturing techniques. Iterating on the chassis enclosure highlighted the importance of precise measurements, tolerances, and planning ahead to minimize iteration time. While 3D printing allowed for intricate custom shapes, laser cutting provided a faster workflow for structural components. Overall, this experience deepened my understanding of design-for-manufacturing principles and collaborative problem-solving in engineering.</p>
 
         
       </section>
