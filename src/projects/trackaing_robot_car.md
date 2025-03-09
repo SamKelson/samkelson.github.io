@@ -133,8 +133,12 @@ With a classmate’s help, we laser-cut access holes for the battery and switch.
 
 Final version:
 
-![Final Laser Cut Box](../assets/images/RobotCarProj/FinalLaserCutBox.jpg)  
+![Final Laser Cut Box](../assets/images/RobotCarProj/FinalLaserCutBox.jpg) 
 
 ## Conclusion  
 
 This project provided valuable hands-on experience with both additive and subtractive manufacturing techniques. Iterating on the chassis enclosure highlighted the importance of precise measurements, tolerances, and planning ahead to minimize iteration time. While 3D printing allowed for intricate custom shapes, laser cutting provided a faster workflow for structural components. Overall, this experience deepened my understanding of design-for-manufacturing principles and collaborative problem-solving in engineering.
+
+Here is a picture showing all the iterations we did: 
+
+![All Iterations](../assets/images/RobotCarProj/All_Iterations.jpg)
