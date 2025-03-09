@@ -162,7 +162,17 @@ body {
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+
+  // center images in the pag__content
+  img, video {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
+  
 
 .page__hero {
   position: relative;
