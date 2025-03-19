@@ -62,6 +62,31 @@ Another issue we encountered was installing the swivel pin. We weren’t entirel
 
 ## Adding a Multifunctional Arm Phone Holder
 
+As part of learning to utilize and modify open-source accessibility hardware, we decided to add a multifunctional arm-mounted phone holder to the back of the wrist. The goal was to make it easier for someone missing a hand to use a cellphone and perform other tasks by mounting the phone to their other wrist. We sourced the design for the arm holder from [Thingiverse](https://www.thingiverse.com/thing:6917657).  
+
+The idea was to securely attach the arm to the back of the gripper box using adhesive, providing a stable mounting point for the phone.  
+
+Here is our initial sketch of the design:  
+
+![Phone holder sketch](../assets/images/EnableHand/PhoneHolderSketch.png)  
+
+And here is a mock-up in Fusion 360:  
+
+![Phone holder mount in Fusion](../assets/images/EnableHand/PhoneHolderInFusion.png)  
+
+The actual phone holder requires a rubber band to keep the phone stable but otherwise does not need any additional parts. The gear-like connectors allow the position to be locked in place with the addition of these screws:  
+
+![Screws](../assets/images/EnableHand/Screws.png)  
 
 
-## Reflecting
+### Ethical Reflection on Open-Source Prosthetic Design  
+
+This project highlighted the impact of open-source accessibility hardware and the ethical considerations that come with designing assistive technology. The e-NABLE organization embodies the principles of community-driven innovation, where volunteers use rapid prototyping to create affordable prosthetics for those in need. However, while open-source designs offer accessibility and affordability, they also present challenges in usability, customization, and documentation quality.  
+
+One key ethical question is whether these prosthetics truly meet the needs of their users. As discussed in Microsoft's [Inclusive Design Toolkit](https://inclusive.microsoft.design/), effective assistive technology must be designed with, not just for, the people who use it. While e-NABLE has made great strides in normalizing prosthetic access, the process would benefit from more direct user feedback loops. Many users may have unique needs that a one-size-fits-all design cannot fully address. A start might be to provide the full CAD files used to make the design instead of just the mesh files. Additionally, future versions should implement feedback presented by users, for instance a comment on the e-NABLE site highlights that wrist pins were a common and frequent failure mode.
+
+Another consideration is the role of rapid prototyping in prosthesis development. 3D printing allows for low-cost, iterative improvements, but it also introduces concerns about durability and long-term wearability. The prosthetic hand we built, for instance, had limitations in structural integrity, as demonstrated when the screws attaching the swivel pin tore out. This raises an important point—just because a technology is accessible and inexpensive doesn’t automatically make it the best solution. Inclusive design requires balancing affordability with functionality, ensuring that devices are both practical and reliable.  
+
+Additionally, the documentation provided for assembling the prosthetic revealed gaps in accessibility. Microsoft's Inclusive Design principles emphasize the importance of clear, multimodal communication. In this case, while a video guide was available, the written instructions lacked clarity in certain areas, such as part identification and assembly steps. Improving documentation to be more universally accessible perhaps by, including better diagrams, clearer labeling, and multiple instructional formats, would enhance usability for a broader audience.  
+
+Ultimately, this project reinforced the idea that ethical design is about more than just making something work—it’s about making it work well for the people who need it most. Open-source initiatives like e-NABLE have the potential to transform lives, but they should continuously strive to integrate user feedback, improve documentation, and ensure that accessibility is at the forefront of every design decision.
