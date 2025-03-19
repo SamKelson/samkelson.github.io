@@ -79,7 +79,7 @@ The actual phone holder requires a rubber band to keep the phone stable but othe
 ![Screws](../assets/images/EnableHand/Screws.png)  
 
 
-### Ethical Reflection on Open-Source Prosthetic Design  
+## Ethical Reflection on Open-Source Prosthetic Design  
 
 This project highlighted the impact of open-source accessibility hardware and the ethical considerations that come with designing assistive technology. The e-NABLE organization embodies the principles of community-driven innovation, where volunteers use rapid prototyping to create affordable prosthetics for those in need. However, while open-source designs offer accessibility and affordability, they also present challenges in usability, customization, and documentation quality.  
 
