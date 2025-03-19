@@ -12,7 +12,7 @@
 
 <!-- begin _includes/seo.html -->
 <title>ENGR11a: 3D Printing a Prosthetic Hand - Sam Kelson</title>
-<meta name="description" content="/projects/prosthetic_hand/  CONTENTS  Updated: March 17th 2025...">
+<meta name="description" content="/projects/prosthetic_hand/  CONTENTS  1. Introduction 2. Comparing Documentation 1. e-NABLE Hub vs. NIH 2. Video vs. PDF 3. Printing 4. Assembling 5. Finished Build 6. Adding a Multifunctional Arm Phone Holder 7...">
 
 
 
@@ -23,11 +23,11 @@
 <meta property="og:url" content="https://samkelson.github.io/projects/prosthetic_hand/">
 
 
-  <meta property="og:description" content="/projects/prosthetic_hand/  CONTENTS  Updated: March 17th 2025...">
+  <meta property="og:description" content="/projects/prosthetic_hand/  CONTENTS  1. Introduction 2. Comparing Documentation 1. e-NABLE Hub vs. NIH 2. Video vs. PDF 3. Printing 4. Assembling 5. Finished Build 6. Adding a Multifunctional Arm Phone Holder 7...">
 
 
 
-  <meta property="og:image" content="https://samkelson.github.io/assets/images/final_nametag.jpg">
+  <meta property="og:image" content="https://samkelson.github.io/assets/images/EnableHand/EnableHandTopDown.jpg">
 
 
 
@@ -167,7 +167,7 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/images/final_nametag.jpg');"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/images/EnableHand/EnableHandTopDown.jpg');"
 >
   
     <div class="wrapper">
@@ -219,11 +219,40 @@
           <aside class="sidebar__right sticky ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
-              
+              <div class="toc__menu" >
+        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#comparing-documentation">Comparing Documentation</a><ol><li><a href="#e-nable-hub-vs.-nih">e-NABLE Hub vs. NIH</a></li><li><a href="#video-vs.-pdf">Video vs. PDF</a></li></ol></li><li><a href="#printing">Printing</a></li><li><a href="#assembling">Assembling</a></li><li><a href="#finished-build">Finished Build</a></li><li><a href="#adding-a-multifunctional-arm-phone-holder">Adding a Multifunctional Arm Phone Holder</a></li><li><a href="#reflecting">Reflecting</a></li></ol>
+      </div>
             </nav>
           </aside>
         
-        
+        <h2 id="introduction" tabindex="-1">Introduction</h2>
+<p>In this project, I explored the world of open-source accessibility hardware by 3D printing and assembling an e-NABLE Phoenix v2 prosthetic hand at 150% scale. Using resources from the e-NABLE hub, I navigated open-source documentation, critiqued its clarity, and proposed improvements. The hands-on experience with Prusa 3D printers and assembly kits deepened my understanding of rapid prototyping for assistive devices. As part of my reflection, I conceptualized a design modification by adding a phone holder arm to enhance usability for individuals with limited hand function. This project reinforced my appreciation for open-source collaboration in engineering for accessibility.</p>
+<h2 id="comparing-documentation" tabindex="-1">Comparing Documentation</h2>
+<h3 id="e-nable-hub-vs.-nih" tabindex="-1"><a href="https://hub.e-nable.org/p/devices?p=Phoenix+v2+Hand">e-NABLE Hub</a> vs. <a href="https://3d.nih.gov/entries/3DPX-020259">NIH</a></h3>
+<p>For this project, we were given two different websites to gather information from. Both websites were overall very similar and contained about the same information. However, I found the layout of the e-NABLE Hub website more user-friendly, as it immediately provided a description of the hand followed by the files and resources needed to build it. Additionally, the e-NABLE Hub website includes links to video tutorials, which were helpful. While the NIH 3D Print Exchange offers more download format options and does include the same documentation, it is less structured and harder to navigate. Users may need to search more to find the necessary instructions. To improve usability, the NIH platform could better organize its resources and integrate step-by-step guides like e-NABLE. Overall, e-NABLE offers a more accessible, simpler, and structured experience for building the hand.</p>
+<h3 id="video-vs.-pdf" tabindex="-1">Video vs. PDF</h3>
+<p>The e-NABLE Hub website provides both video instructions and a PDF guide for assembling the prosthetic hand. In general, I find that video instructions tend to be easier to follow than written guides, and this case was no exception. The video not only offers a clearer, step-by-step demonstration but also includes additional details not covered in the PDF. For instance, the video provides instructions for the thermo-fitting of the wrist, a crucial step that is missing from the PDF guide. However, I noticed that the video’s thermo-fitting procedure differed from the method we used during assembly. Instead of using hot water, we used a heat gun and a 3D-printed mold, which seemed much more effective. While this method requires a heat gun, something not everyone has access to, I think it would be valuable for the video or PDF to at least mention it as an alternative.</p>
+<p>Additionally, the PDF documentation lacks a comprehensive list of all required parts at the beginning, which would be a simple yet valuable addition for better clarity.</p>
+<p>One of the most challenging steps, stringing the fingers, was much easier to understand through the video. While the text description in the PDF was fairly clear, I believe the process could be improved by incorporating a hole-by-hole visual guide. A labeled diagram showing the exact order in which the string should pass through each hole would make this step significantly easier to follow.</p>
+<h2 id="printing" tabindex="-1">Printing</h2>
+<p>Before assembling the prosthetic hand, we first had to prepare the 3D models for printing. The downloaded files included parts for both left and right hands, but it was somewhat difficult to determine which pieces were necessary for each. As mentioned earlier, a clearly labeled parts list for a single hand at the beginning of the instruction document would have been helpful.</p>
+<p>After importing the required files into Prusa Slicer and scaling them up by 150%, we proceeded with the following setup:</p>
+<p><img src="/assets/images/EnableHand/HandInPrusa.png" alt="Hand in Prusa Slicer being prepared to 3D print"></p>
+<p>A minimum of three print beds were needed, making the printing process time-consuming. As shown in the image above, we applied build plate supports and used 35% infill. Additionally, we added three raft layers, which required merging all objects on each print bed to ensure a uniform raft and prevent collisions.</p>
+<p><img src="/assets/images/EnableHand/Printing.jpg" alt="First build plate printing"></p>
+<p>In hindsight, most of the objects likely didn’t require a raft layer, and its inclusion made post-processing more difficult. Removing the excess PLA layers became a tedious part of the cleanup process.</p>
+<p><img src="/assets/images/EnableHand/PostPrinting.jpg" alt="Removing the supports and raft layers"></p>
+<h2 id="assembling" tabindex="-1">Assembling</h2>
+<p>Assembly was straightforward, though we primarily followed the written documentation despite its shortcomings (without any particular reason—we just did).</p>
+<p><img src="/assets/images/EnableHand/SethBuilding.jpg" alt="Seth working on assembling the hand"></p>
+<p>The most challenging part was stringing the fingers. At one point, we tied knots too early and had to painstakingly untie them using tweezers. In hindsight, following the video tutorial would have been a better approach, along with reading further ahead in the instruction manual before attempting to string the fingers. Overall, however, the assembly process was fairly simple.</p>
+<p>Another issue we encountered was installing the swivel pin. We weren’t entirely sure which screws to use, leading to some trial and error. Screwing into the PLA was also tricky, as the threads inside were not well-formed, making the process more difficult. After using the assembled hand for a short time, the screws attaching the swivel pin tore out, destroying the threads in the process. This required us to reprint the swivel pin.</p>
+<h2 id="finished-build" tabindex="-1">Finished Build</h2>
+<p><img src="/assets/images/EnableHand/SamWearingHand.jpg" alt="Me wearing the hand"><br>
+<img src="/assets/images/EnableHand/SamClenchingHand.jpg" alt="Me clenching the hand"></p>
+<h2 id="adding-a-multifunctional-arm-phone-holder" tabindex="-1">Adding a Multifunctional Arm Phone Holder</h2>
+<h2 id="reflecting" tabindex="-1">Reflecting</h2>
+
         
       </section>
 
