@@ -1,4 +1,4 @@
-{% capture overlay_img_path %}{{ header.overlay_image | relative_url }}{% endcapture %}
+{% capture overlay_img_path %}{{ header.overlay_image | url }}{% endcapture %}
 
 {% if header.overlay_filter contains "gradient" %}
   {% capture overlay_filter %}{{ header.overlay_filter }}{% endcapture %}
@@ -36,17 +36,17 @@
       {% endif %}
       {% include components/page__meta.html %}
       {% if header.cta_url %}
-        <p><a href="{{ header.cta_url | relative_url }}" class="btn btn--light-outline btn--large">{{ header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+        <p><a href="{{ header.cta_url | url }}" class="btn btn--light-outline btn--large">{{ header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
       {% endif %}
       {% if header.actions %}
         <p>
         {% for action in header.actions %}
-          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+          <a href="{{ action.url | url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
         {% endfor %}
       {% endif %}
     </div>
   {% else %}
-    <img src="{{ header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
+    <img src="{{ header.image | url }}" alt="{{ image_description }}" class="page__hero-image">
   {% endif %}
   {% if header.caption %}
     <span class="page__hero-caption">{{ header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
