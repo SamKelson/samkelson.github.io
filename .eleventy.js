@@ -389,9 +389,7 @@ function imageLocationFixer(md) {
     });
 }
 
-module.exports.config = {
-	pathPrefix: "/",
-}
+
 
 function numberOfWords(content) {
     return content.split(/\s+/g).length;
