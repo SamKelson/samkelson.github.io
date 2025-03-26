@@ -22,16 +22,9 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const inspect = require("node:util").inspect;
 
-// relativeURL
-const path = require("path");
-const urlFilter = require("@11ty/eleventy/src/Filters/Url");
-const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
-
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
-    let pathPrefix = "/";
-
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
     eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
@@ -353,7 +346,6 @@ module.exports = function (eleventyConfig) {
     //     }
     // );
 
-    eleventyConfig.addFilter("relative_url", relativeURLALT);
     eleventyConfig.addFilter("absolute_url", absoluteUrl);
 
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
@@ -361,8 +353,6 @@ module.exports = function (eleventyConfig) {
 
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
-
-        pathPrefix: pathPrefix,
 
         environment: "production",
 
@@ -407,87 +397,6 @@ function numberOfWords(content) {
     return content.split(/\s+/g).length;
 }
 
-function relativeURL(url, pathPrefix = undefined) {
-    if (pathPrefix !== undefined) {
-        // Fall back on original url filter if pathPrefix is set.
-        return urlFilter(url, pathPrefix);
-    }
-
-    if (pathPrefix == undefined && this.page == undefined) {
-        return urlFilter(url, "");
-    }
-
-    // Look up the url of the current rendering page, which is accessible via
-    // `this`.
-    //console.log(this); // rmcg
-
-    // rmcg - removed ctx from this.ctx.page.url
-    const currentDir = this.page.url;
-    const filteredUrl = urlFilter(url, "/");
-
-    // Make sure the index.html is expressed.
-    const indexUrl = indexify(filteredUrl);
-
-    // Check that the url doesn't specify a protocol.
-    const u = new URL(indexUrl, "make-relative://");
-    if (u.protocol !== "make-relative:") {
-        // It has a protocol, so just return the filtered URL output.
-        return filteredUrl;
-    }
-
-    // Return the relative path, or `index.html` if it's the same as the current
-    // page's directory.
-    const relativePath = `${
-        path.relative(currentDir, u.pathname) || "index.html"
-    }`;
-    return relativePath;
-}
-
-/**
- * Just `{{ '/something' | url }}` will return the relative path to
- * `/something/index.html`.
- *
- * `{{ '/something.with.dots' | url }}` will return the relative path to
- * `/something.with.dots`.
- *
- * @param {string} url the URL to transform
- * @param {string} [pathPrefix] optional path prefix to force an absolute URL
- * @returns {string} resulting URL
- */
-function relativeURLALT(url, pathPrefix = undefined) {
-    if (pathPrefix !== undefined) {
-        // Fall back on original url filter if pathPrefix is set.
-        return urlFilter(url, pathPrefix);
-    }
-
-    if (pathPrefix == undefined && this.page == undefined) {
-        //      console.log("dropping out");
-        return urlFilter(url, "");
-    }
-
-    // Look up the url of the current rendering page, which is accessible via
-    // `this`.
-    //console.log(this);
-    const currentDir = this.page.url;
-    const filteredUrl = urlFilter(url, "/");
-
-    // Make sure the index.html is expressed.
-    const indexUrl = indexify(filteredUrl);
-
-    // Check that the url doesn't specify a protocol.
-    const u = new URL(indexUrl, "make-relative://");
-    if (u.protocol !== "make-relative:") {
-        // It has a protocol, so just return the filtered URL output.
-        return filteredUrl;
-    }
-
-    // Return the relative path, or `index.html` if it's the same as the current
-    // page's directory.
-    const relativePath = `${
-        path.relative(currentDir, u.pathname) || "index.html"
-    }`;
-    return relativePath;
-}
 
 function absoluteUrl(url) {
     if (url !== undefined) {
