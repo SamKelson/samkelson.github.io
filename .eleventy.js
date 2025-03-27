@@ -308,7 +308,7 @@ module.exports = function (eleventyConfig) {
             .use(markdownItAnchor, mdAnchorOpts)
             .use(imageLocationFixer)
             .use(mdBiblatex, {
-                bibPath: "./dist/assets/bibliography.bib",
+                bibPath: "./src/assets/bibliography.bib",
             })
     );
 
