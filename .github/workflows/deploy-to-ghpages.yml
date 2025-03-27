@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: current
+          node-version: 22.13.1
 
       - name: Persist npm cache
         uses: actions/cache@v3
