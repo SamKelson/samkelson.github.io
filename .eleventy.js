@@ -9,7 +9,7 @@ const autoprefixer = require("autoprefixer");
 const markdownIt = require("markdown-it");
 const markdownItRenderer = new markdownIt();
 const markdownItAnchor = require("markdown-it-anchor");
-// const relativeUrl = require("eleventy-filter-relative-url");
+const mdBiblatex = require('@arothuis/markdown-it-biblatex');
 const pluginTOC = require("eleventy-plugin-toc");
 const moment = require("moment");
 const description = require("eleventy-plugin-description");
@@ -291,7 +291,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLibrary(
         "md",
         markdownIt(MarkdownItOptions)
-
             .use(require("markdown-it-attrs"))
             .use(require("markdown-it-container"), "", {
                 validate: () => true,
@@ -306,9 +305,11 @@ module.exports = function (eleventyConfig) {
             })
             .use(require("markdown-it-fontawesome"))
             .use(require("markdown-it-footnote"))
-
             .use(markdownItAnchor, mdAnchorOpts)
             .use(imageLocationFixer)
+            .use(mdBiblatex, {
+                bibPath: "./dist/assets/bibliography.bib",
+            })
     );
 
     // override markdown-it-footnote anchor template to use a different unicode character

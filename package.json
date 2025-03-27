@@ -19,6 +19,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "@11ty/eleventy-upgrade-help": "^1.0.1",
+    "@arothuis/markdown-it-biblatex": "^2.1.0",
     "autoprefixer": "^10.4.1",
     "bootstrap": "^5.3.3",
     "csv-parse": "^5.0.4",
