@@ -18,3 +18,9 @@ description: "Left Hand Guitar Accessibility Tool"
 [@ChordBuddySharkTank]
 
 [bibliography]
+
+## Empathy Map
+![Empathy Map](../assets/images/guitarBuddy/EmpathyMap.png)
+
+## Journey Map
+![Journey Map](../assets/images/guitarBuddy/JourneyMap.png)
