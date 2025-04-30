@@ -207,6 +207,112 @@ For a comprehensive summary of our prototyping, testing, and feedback synthesis,
 <iframe src="https://docs.google.com/document/d/1OlIt-N3SHmk28rxIj6_cAu8pcSXB3PIYDMm0hJg1oBE/preview" width="100%" height="800px" allow="autoplay"></iframe>
 
 
+## Iteration Log
+
+### Addressing the Guitar Neck Taper
+
+After printing and testing **Prototype 2**, we uncovered a critical mechanical issue: while the central pivot allowed the device to flex around the neck, it wasn’t enough to ensure that the fret overlays aligned properly with the guitar strings.
+
+The issue stemmed from the **tapered shape of the guitar neck** — as the neck widens slightly along its length, our original arm design caused the sides of the device to angle outward, breaking alignment with the frets. This misalignment reduced usability and defeated the purpose of accurate finger placement.
+
+#### ✅ Solution: Side Arm Pivots
+
+We introduced **additional pivots** where the center arms connect to the device's sides. These pivots allow the sides of the device to **remain parallel to the guitar neck**, ensuring accurate fret alignment and improving cross-guitar compatibility.
+
+![Side Arm Pivots](../assets/images/guitarBuddy/SideArmPivots.png)
+
+---
+
+### Engineering the Fretboard Mechanism
+
+Next, we focused on designing a **fretboard mechanism** that lets users press buttons ("fret fingers") to simulate finger placement.
+
+Our goals:
+- **Flexibility**: Fingers should bend under pressure and snap back into place.
+- **Rigidity**: Pressing one finger shouldn't trigger movement in others.
+
+We experimented with **TPU** and **PLA**, iterating through three major designs:
+
+#### ❌ Flat TPU Sheet
+
+- **Pros**: Flexible and easy to print.
+- **Cons**: Covered the strings and frets completely, eliminating visual feedback. Button response was inconsistent and too soft.
+
+![Flat TPU Sheet](../assets/images/guitarBuddy/FlatTPUSheet.png)
+
+#### ❌ Three Protrusions,  One for Each String
+
+- **Pros**: Better fret visibility and slightly improved finger action.
+- **Cons**: Outer fingers had less torque (closer to pivot), making them hard to press. String alignment was challenging. TPU was too floppy; PLA was too rigid.
+
+![Three Protrusions](../assets/images/guitarBuddy/ThreeProngs.png)
+
+#### ✅ Final Design: Single Rigid Arm with Three Fingers
+
+- **Uniform torque** due to equal pivot distances.
+- **Simpler alignment** with guitar strings.
+- **Material choice**: PLA offered a good compromise. By varying thickness, we could achieve both flexibility and rigidity within the same part.
+
+This design worked best across all metrics — it was **snappy, aligned, and more reliable**.
+
+![Final CAD Drawing](../assets/images/guitarBuddy/FinalCAD.png)
+
+---
+
+### Adding Modular Chord Buttons
+
+To improve usability and allow users to easily press multiple fret fingers at once, we introduced **modular chord buttons**. These are custom-printed pressable overlays that connect to specific combinations of fret fingers, enabling users to form full chords with a single motion.
+
+We achieved this by adding **holes to the tops of the fret fingers**. This allowed us to design snap-on chord buttons that can selectively press down any combination of fingers.
+
+#### 🔧 How to Design a Chord Button
+
+To create a new chord shape:
+
+1. **Project** the holes of the fret fingers you want to press into a new sketch in Fusion360.
+2. In that sketch, **connect the hole locations** using small beams or bridges.
+3. **Extrude** a top surface (the button) to your desired height or shape.
+4. Print the button and press it into the holes — that’s it!
+
+This modular system makes it easy to prototype different chord layouts, support new users, or even develop **song-specific overlays** for teaching purposes.
+
+![Example Chord Button (D Chord)](../assets/images/guitarBuddy/DChordPresser.png)
+
+---
+
+### Final Fit Tuning
+
+The last stage of our iteration process focused on **precise fitting and tolerances**. Even with a functional prototype, we had to resolve:
+
+- Finger **height and spacing**
+- Smooth yet stable **pivot movement**
+- Reliable **grip across guitar neck sizes**
+- Avoiding **component interference**
+
+This phase required lots of **trial and error** — tweaking CAD parameters by millimeters, adjusting print settings, and repeatedly re-fitting components. Though tedious, these refinements were essential for achieving a design that felt both polished and user-friendly.
+
+---
+
+### Quantitative Failure Testing
+
+To further inform our design decisions and material choices, we conducted **basic force testing** on key components. This gave us quantitative insight into how much stress the device could withstand — and where improvements were needed.
+
+#### Test Setup
+
+Using a force gauge, we applied increasing pressure to specific components until failure occurred. We ran two tests:
+
+| **Test #** | **Test Description**                        | **Force Applied** | **Break Point** |
+|------------|---------------------------------------------|-------------------|------------------|
+| Test 1     | Force applied on the center pivot           | 63.5 N            | Component snapped at the main arm junction.<br>![Broken Arm](../assets/images/guitarBuddy/Test1.jpg) |
+| Test 2     | Force applied to one of the fingers/pressers | 13.6 N            | Finger arm bent and detached under pressure.<br>![Finger Test](../assets/images/guitarBuddy/Test2.png) |
+
+#### Observations
+
+- The **center pivot** was robust, suggesting the main body structure could handle user-level stress without failure.
+- The **fret fingers**, being thinner and more dynamic, broke at lower force thresholds — which matches our expectations.
+- These results validated the use of **PLA** with controlled thickness for fret fingers and informed later **reinforcement and sizing decisions**.
+
+---
 
 ## Bibliography
 
