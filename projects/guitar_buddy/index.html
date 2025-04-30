@@ -220,7 +220,7 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
               <div class="toc__menu" >
-        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#empathy-and-journey-maps">Empathy and Journey Maps</a></li><li><a href="#problem-definition">Problem Definition</a></li><li><a href="#thematic-analysis">Thematic Analysis</a><ol><li><a href="#insight-and-%22how-might-we%3F%22-statements">Insight and &quot;How Might We?&quot; Statements</a></li></ol></li><li><a href="#brainstorming">Brainstorming</a></li><li><a href="#storyline">Storyline</a></li><li><a href="#pitch-feedback">Pitch Feedback</a></li><li><a href="#prototype-v1%3A-initial-design-%26-testing">Prototype v1: Initial Design &amp; Testing</a><ol><li><a href="#in-class-testing-summary">In-Class Testing Summary</a></li><li><a href="#feedback-capture-grid-%E2%80%93-prototype-v1">Feedback Capture Grid – Prototype v1</a></li></ol></li><li><a href="#prototype-v2%3A-iteration-%26-expanded-testing">Prototype v2: Iteration &amp; Expanded Testing</a><ol><li><a href="#external-testing-%26-interviews">External Testing &amp; Interviews</a></li><li><a href="#feedback-capture-grid-%E2%80%93-prototype-v2">Feedback Capture Grid – Prototype v2</a></li></ol></li><li><a href="#design-review-summary">Design Review Summary</a></li><li><a href="#guiding-principles">Guiding Principles</a></li><li><a href="#revised-%E2%80%9Chow-might-we%E2%80%9D-statements">Revised “How Might We” Statements</a></li><li><a href="#ideation">Ideation</a></li><li><a href="#full-design-review-(written-version)">Full Design Review (Written Version)</a></li><li><a href="#bibliography">Bibliography</a></li></ol>
+        <ol><li><a href="#introduction">Introduction</a></li><li><a href="#empathy-and-journey-maps">Empathy and Journey Maps</a></li><li><a href="#problem-definition">Problem Definition</a></li><li><a href="#thematic-analysis">Thematic Analysis</a><ol><li><a href="#insight-and-%22how-might-we%3F%22-statements">Insight and &quot;How Might We?&quot; Statements</a></li></ol></li><li><a href="#brainstorming">Brainstorming</a></li><li><a href="#storyline">Storyline</a></li><li><a href="#pitch-feedback">Pitch Feedback</a></li><li><a href="#prototype-v1%3A-initial-design-%26-testing">Prototype v1: Initial Design &amp; Testing</a><ol><li><a href="#in-class-testing-summary">In-Class Testing Summary</a></li><li><a href="#feedback-capture-grid-%E2%80%93-prototype-v1">Feedback Capture Grid – Prototype v1</a></li></ol></li><li><a href="#prototype-v2%3A-iteration-%26-expanded-testing">Prototype v2: Iteration &amp; Expanded Testing</a><ol><li><a href="#external-testing-%26-interviews">External Testing &amp; Interviews</a></li><li><a href="#feedback-capture-grid-%E2%80%93-prototype-v2">Feedback Capture Grid – Prototype v2</a></li></ol></li><li><a href="#design-review-summary">Design Review Summary</a></li><li><a href="#guiding-principles">Guiding Principles</a></li><li><a href="#revised-%E2%80%9Chow-might-we%E2%80%9D-statements">Revised “How Might We” Statements</a></li><li><a href="#ideation">Ideation</a></li><li><a href="#full-design-review-(written-version)">Full Design Review (Written Version)</a></li><li><a href="#iteration-log">Iteration Log</a><ol><li><a href="#addressing-the-guitar-neck-taper">Addressing the Guitar Neck Taper</a></li><li><a href="#engineering-the-fretboard-mechanism">Engineering the Fretboard Mechanism</a></li><li><a href="#adding-modular-chord-buttons">Adding Modular Chord Buttons</a></li><li><a href="#final-fit-tuning">Final Fit Tuning</a></li><li><a href="#quantitative-failure-testing">Quantitative Failure Testing</a></li></ol></li><li><a href="#bibliography">Bibliography</a></li></ol>
       </div>
             </nav>
           </aside>
@@ -392,6 +392,102 @@
 <h2 id="full-design-review-(written-version)" tabindex="-1">Full Design Review (Written Version)</h2>
 <p>For a comprehensive summary of our prototyping, testing, and feedback synthesis, view our full design review document below:</p>
 <iframe src="https://docs.google.com/document/d/1OlIt-N3SHmk28rxIj6_cAu8pcSXB3PIYDMm0hJg1oBE/preview" width="100%" height="800px" allow="autoplay"></iframe>
+<h2 id="iteration-log" tabindex="-1">Iteration Log</h2>
+<h3 id="addressing-the-guitar-neck-taper" tabindex="-1">Addressing the Guitar Neck Taper</h3>
+<p>After printing and testing <strong>Prototype 2</strong>, we uncovered a critical mechanical issue: while the central pivot allowed the device to flex around the neck, it wasn’t enough to ensure that the fret overlays aligned properly with the guitar strings.</p>
+<p>The issue stemmed from the <strong>tapered shape of the guitar neck</strong> — as the neck widens slightly along its length, our original arm design caused the sides of the device to angle outward, breaking alignment with the frets. This misalignment reduced usability and defeated the purpose of accurate finger placement.</p>
+<h4 id="%E2%9C%85-solution%3A-side-arm-pivots" tabindex="-1">✅ Solution: Side Arm Pivots</h4>
+<p>We introduced <strong>additional pivots</strong> where the center arms connect to the device's sides. These pivots allow the sides of the device to <strong>remain parallel to the guitar neck</strong>, ensuring accurate fret alignment and improving cross-guitar compatibility.</p>
+<p><img src="/assets/images/guitarBuddy/SideArmPivots.png" alt="Side Arm Pivots"></p>
+<hr>
+<h3 id="engineering-the-fretboard-mechanism" tabindex="-1">Engineering the Fretboard Mechanism</h3>
+<p>Next, we focused on designing a <strong>fretboard mechanism</strong> that lets users press buttons (&quot;fret fingers&quot;) to simulate finger placement.</p>
+<p>Our goals:</p>
+<ul>
+<li><strong>Flexibility</strong>: Fingers should bend under pressure and snap back into place.</li>
+<li><strong>Rigidity</strong>: Pressing one finger shouldn't trigger movement in others.</li>
+</ul>
+<p>We experimented with <strong>TPU</strong> and <strong>PLA</strong>, iterating through three major designs:</p>
+<h4 id="%E2%9D%8C-flat-tpu-sheet" tabindex="-1">❌ Flat TPU Sheet</h4>
+<ul>
+<li><strong>Pros</strong>: Flexible and easy to print.</li>
+<li><strong>Cons</strong>: Covered the strings and frets completely, eliminating visual feedback. Button response was inconsistent and too soft.</li>
+</ul>
+<p><img src="/assets/images/guitarBuddy/FlatTPUSheet.png" alt="Flat TPU Sheet"></p>
+<h4 id="%E2%9D%8C-three-protrusions%2C-one-for-each-string" tabindex="-1">❌ Three Protrusions,  One for Each String</h4>
+<ul>
+<li><strong>Pros</strong>: Better fret visibility and slightly improved finger action.</li>
+<li><strong>Cons</strong>: Outer fingers had less torque (closer to pivot), making them hard to press. String alignment was challenging. TPU was too floppy; PLA was too rigid.</li>
+</ul>
+<p><img src="/assets/images/guitarBuddy/ThreeProngs.png" alt="Three Protrusions"></p>
+<h4 id="%E2%9C%85-final-design%3A-single-rigid-arm-with-three-fingers" tabindex="-1">✅ Final Design: Single Rigid Arm with Three Fingers</h4>
+<ul>
+<li><strong>Uniform torque</strong> due to equal pivot distances.</li>
+<li><strong>Simpler alignment</strong> with guitar strings.</li>
+<li><strong>Material choice</strong>: PLA offered a good compromise. By varying thickness, we could achieve both flexibility and rigidity within the same part.</li>
+</ul>
+<p>This design worked best across all metrics — it was <strong>snappy, aligned, and more reliable</strong>.</p>
+<p><img src="/assets/images/guitarBuddy/FinalCAD.png" alt="Final CAD Drawing"></p>
+<hr>
+<h3 id="adding-modular-chord-buttons" tabindex="-1">Adding Modular Chord Buttons</h3>
+<p>To improve usability and allow users to easily press multiple fret fingers at once, we introduced <strong>modular chord buttons</strong>. These are custom-printed pressable overlays that connect to specific combinations of fret fingers, enabling users to form full chords with a single motion.</p>
+<p>We achieved this by adding <strong>holes to the tops of the fret fingers</strong>. This allowed us to design snap-on chord buttons that can selectively press down any combination of fingers.</p>
+<h4 id="%F0%9F%94%A7-how-to-design-a-chord-button" tabindex="-1">🔧 How to Design a Chord Button</h4>
+<p>To create a new chord shape:</p>
+<ol>
+<li><strong>Project</strong> the holes of the fret fingers you want to press into a new sketch in Fusion360.</li>
+<li>In that sketch, <strong>connect the hole locations</strong> using small beams or bridges.</li>
+<li><strong>Extrude</strong> a top surface (the button) to your desired height or shape.</li>
+<li>Print the button and press it into the holes — that’s it!</li>
+</ol>
+<p>This modular system makes it easy to prototype different chord layouts, support new users, or even develop <strong>song-specific overlays</strong> for teaching purposes.</p>
+<p><img src="/assets/images/guitarBuddy/DChordPresser.png" alt="Example Chord Button (D Chord)"></p>
+<hr>
+<h3 id="final-fit-tuning" tabindex="-1">Final Fit Tuning</h3>
+<p>The last stage of our iteration process focused on <strong>precise fitting and tolerances</strong>. Even with a functional prototype, we had to resolve:</p>
+<ul>
+<li>Finger <strong>height and spacing</strong></li>
+<li>Smooth yet stable <strong>pivot movement</strong></li>
+<li>Reliable <strong>grip across guitar neck sizes</strong></li>
+<li>Avoiding <strong>component interference</strong></li>
+</ul>
+<p>This phase required lots of <strong>trial and error</strong> — tweaking CAD parameters by millimeters, adjusting print settings, and repeatedly re-fitting components. Though tedious, these refinements were essential for achieving a design that felt both polished and user-friendly.</p>
+<hr>
+<h3 id="quantitative-failure-testing" tabindex="-1">Quantitative Failure Testing</h3>
+<p>To further inform our design decisions and material choices, we conducted <strong>basic force testing</strong> on key components. This gave us quantitative insight into how much stress the device could withstand — and where improvements were needed.</p>
+<h4 id="test-setup" tabindex="-1">Test Setup</h4>
+<p>Using a force gauge, we applied increasing pressure to specific components until failure occurred. We ran two tests:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Test #</strong></th>
+<th><strong>Test Description</strong></th>
+<th><strong>Force Applied</strong></th>
+<th><strong>Break Point</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test 1</td>
+<td>Force applied on the center pivot</td>
+<td>63.5 N</td>
+<td>Component snapped at the main arm junction.<br><img src="/assets/images/guitarBuddy/Test1.jpg" alt="Broken Arm"></td>
+</tr>
+<tr>
+<td>Test 2</td>
+<td>Force applied to one of the fingers/pressers</td>
+<td>13.6 N</td>
+<td>Finger arm bent and detached under pressure.<br><img src="/assets/images/guitarBuddy/Test2.png" alt="Finger Test"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="observations" tabindex="-1">Observations</h4>
+<ul>
+<li>The <strong>center pivot</strong> was robust, suggesting the main body structure could handle user-level stress without failure.</li>
+<li>The <strong>fret fingers</strong>, being thinner and more dynamic, broke at lower force thresholds — which matches our expectations.</li>
+<li>These results validated the use of <strong>PLA</strong> with controlled thickness for fret fingers and informed later <strong>reinforcement and sizing decisions</strong>.</li>
+</ul>
+<hr>
 <h2 id="bibliography" tabindex="-1">Bibliography</h2>
 <p><span id="cite-1-0" class="citation">(Betts, 2019)</span></p>
 <p><span id="cite-1-1" class="citation">(ChordBuddy, 2025)</span></p>
