@@ -17,10 +17,13 @@ description: "Fretting Hand Guitar Accessibility Tool"
 
 Learning to play the guitar can be a challenging and frustrating experience, especially for beginners and individuals with hand disabilities. To address these challenges, we introduce **Guitar Buddy**—an assistive device designed to make learning the guitar more accessible and enjoyable for everyone.
 
-
 ## 🛠️ Getting Started: How to Use Guitar Buddy
 
 Welcome to the Guitar Buddy open-source guide! This section will help you set up and start using your device.
+
+Guitar Buddy is designed to address a key challenge for beginner players and individuals with limited finger strength or mobility: pressing down guitar strings accurately and comfortably. While the total force required to press a guitar string hasn’t changed, Guitar Buddy spreads that force across a large, pressable button. This makes fretting significantly easier and more accessible.
+
+To verify its effectiveness, we conducted testing with users of varying experience levels and physical capabilities. All testers reported increased ease in forming chords and reduced hand fatigue, confirming that the device meaningfully improves the guitar learning experience.
 
 **Time Required:** ~1 hour  
 **Difficulty:** Moderate  
