@@ -17,6 +17,121 @@ description: "Left Hand Guitar Accessibility Tool"
 
 Learning to play the guitar can be a challenging and frustrating experience, especially for beginners and individuals with hand disabilities. To address these challenges, we introduce **Guitar Buddy**—an assistive device designed to make learning the guitar more accessible and enjoyable for everyone.
 
+
+
+## 🛠️ Getting Started: How to Use Guitar Buddy
+Welcome to the Guitar Buddy open-source guide! This section will help you set up and start using your device.
+
+**Time Required:** ~1 hour  
+**Difficulty:** Moderate  
+**Tools Required:** 3D printer, rubber bands 
+**Skills Required:** Basic 3D printing and assembly  
+**Use Case:** Assistive device for guitar fretting hand
+**Authors: Sam Kelson, Aidan Wang-Fan, Ava Lorenzana, Rebecca Suarez**
+
+---
+
+### Step 1 — Download the STL Files
+
+- Required parts: Main Body (with print in place joints), Fret Fingers  
+- Optional: Extra chord overlays/buttons
+
+You can download the necessary STL files for 3D printing below:
+
+- [Main Body STL](/assets/3DFiles/GuitarBuddy/GuitarBuddyMainBody.stl)
+- [Fret Fingers STL](/assets/3DFiles/GuitarBuddy/GuitarBuddyFrets.stl)
+- [D Chord Shape STL](/assets/3DFiles/GuitarBuddy/GuitarBuddyDChordShape.stl)
+- [Full Fusion File](/assets/3DFiles/GuitarBuddy/GuitarBuddy.f3d)
+
+---
+
+### Step 2 — Prepare Materials and Tools
+
+Gather the following materials before printing:
+
+**Materials**  
+- PLA filament for all parts (body, fingers, buttons)  
+- Elastic bands or Velcro straps or hair ties  
+
+**Tools**  
+- 3D printer (e.g., Prusa Mini+)  
+- Super glue  
+- Sandpaper or file for cleanup (optional)
+
+🖼️ *Insert image of materials laid out here*
+
+---
+
+### Step 3 — 3D Print All Parts
+
+Load STL files into your slicer and configure print settings:
+
+- Layer height: 0.2 mm  
+- Infill: 20% for all parts  
+- Always add build plate supports  
+- Use PLA for every component
+
+🖼️ *Insert photos of slicing software and completed prints*
+
+---
+
+### Step 4 — Assemble the Mechanism
+
+1. Attach **side arms** to the **main body** using pivot holes.  
+2. Insert **fret fingers** into slots so they spring back upright.  
+3. Attach **chord buttons** (snap into finger holes).  
+4. Add padding or felt under contact surfaces.
+
+🖼️ *Insert exploded CAD view and real assembly photos*
+
+---
+
+### Step 5 — Mount to Your Guitar
+
+Fit Guitar Buddy over the neck:
+
+- Use elastic or Velcro to wrap around the neck  
+- Align fret fingers just above strings  
+- Ensure device doesn’t scratch the wood or press unevenly
+
+> ⚠️ **Warning:** Do not over-tighten! Guitar necks are delicate.
+
+🖼️ *Insert photo of Guitar Buddy mounted on acoustic and electric guitars*
+
+---
+
+### Step 6 — Play and Customize
+
+- Press buttons to simulate finger positions  
+- Use modular chord overlays to form full chords  
+- Design your own overlays for different songs or skill levels  
+- Optional: print different finger tension levels by adjusting finger thickness in CAD
+
+🖼️ *Include demo photos or animation showing button use*
+
+---
+
+### Step 7 (Optional) — Share Your Modifications
+
+Help improve the design!
+
+- Fork the GitHub repo  
+- Add your own chord buttons or ergonomic modifications  
+- Submit a pull request or remix on Thingiverse
+
+🖼️ *Include QR code or GitHub link image*
+
+
+
+
+
+
+
+
+
+
+
+
 ## Empathy and Journey Maps
 
 Before developing Guitar Buddy, we conducted interviews with four individuals to understand the common challenges faced by guitar learners. This research led to the creation of empathy and journey maps, highlighting key pain points and experiences.

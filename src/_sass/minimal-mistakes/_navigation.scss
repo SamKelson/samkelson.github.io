@@ -524,6 +524,25 @@
   .active a {
     @include yiq-contrasted($active-color);
   }
+
+  // Custom scrollbar styling (WebKit browsers)
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($primary-color, 15%);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $background-color;
+    border-left: 1px solid $border-color;
+  }
+
+  // Firefox scrollbar (experimental)
+  scrollbar-color: lighten($primary-color, 15%) $background-color;
+  scrollbar-width: thin;
 }
 
 .toc__menu ol{
